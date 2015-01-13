@@ -42,7 +42,7 @@
 			"title": "Comments",
 			"type": "text",
 			"section": "auton"
-		},
+		}
 	},
 	"sections": {
 		"meta": {
