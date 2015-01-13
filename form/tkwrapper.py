@@ -11,3 +11,9 @@ else:
     from tkinter.filedialog import *
     from tkinter import *
     from tkinter.ttk import *
+
+def bring_to_front(win):
+    win.withdraw()
+    win.deiconify()
+
+Toplevel.bring_to_front = bring_to_front
