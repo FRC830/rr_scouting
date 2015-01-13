@@ -5,13 +5,17 @@ import os
 
 import dataform
 import jsonparser
-import styles
 import tkwrapper as tk
 import util
 
 class FormList(tk.Listbox):
     def __init__(self, parent, files, callback):
-        tk.Listbox.__init__(self, parent, width=30)
+        tk.Listbox.__init__(self, parent, width=30,
+                highlightthickness=0,
+                borderwidth=0,
+                selectborderwidth=0,
+                selectbackground='#9af',
+                activestyle='none')
         self.callback = callback
         self.bind('<Double-Button-1>', lambda event: self.trigger())
         self.bind('<Return>', lambda event: self.trigger())
@@ -26,7 +30,7 @@ class FormList(tk.Listbox):
                 self.insert('end', title)
 
     def curselection(self):
-        return self.choices[tk.Listbox.curselection(self)[0]]
+        return self.choices[int(tk.Listbox.curselection(self)[0])]
 
     def trigger(self):
         if tk.Listbox.curselection(self):
@@ -60,6 +64,7 @@ class FormWindow(tk.Toplevel):
         self.parent = parent
         self.protocol('WM_DELETE_WINDOW', self.destroy)
         self.title(title)
+        self.geometry("+%d+%d" % (parent.winfo_rootx() + 20, parent.winfo_rooty() + 20))
         self.bring_to_front()
         self.path = path
 
@@ -72,9 +77,7 @@ def main():
     os.chdir(os.path.dirname(os.getcwd()))
     version = jsonparser.JsonFile('form/version.json', touch=True).get('version', 'unknown')
     print('Scouting form version %s' % version)
-    root = tk.Tk()
-    root.withdraw()
-    styles.init()
+    root = tk.Root()
     App(root)
     if util.is_darwin():
         util.root_focus_applescript()
