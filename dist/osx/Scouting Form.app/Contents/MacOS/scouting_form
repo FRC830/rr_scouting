@@ -1,0 +1,15 @@
+#!/bin/sh
+
+pwd=$(dirname "$0")
+cd "$pwd"
+
+while [[ ! -e form/app.py ]] && [[ "$(pwd)" != "/" ]]; do
+    cd ..
+done
+
+if [[ ! -e form/app.py ]]; then
+    echo "fatal: form/app.py not found"
+    exit 1
+fi
+
+exec python form/app.py
