@@ -6,6 +6,10 @@ from bottle import redirect, route, static_file, view
 def callback():
     redirect('/form')
 
+@route('/test')
+def callback():
+	return '1'
+
 @route('/form')
 @view('form')
 def callback():
