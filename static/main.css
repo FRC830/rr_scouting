@@ -8,3 +8,8 @@ div.content {
     margin: 2em;
     padding: 1em;
 }
+
+.Section-title{
+	text-decoration:underline;
+	color:fuchsia;
+}

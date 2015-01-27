@@ -1,5 +1,5 @@
 % rebase('base.tpl', title='Scouting form')
-<div class="col-xs-12"><h2>Scouting form</h2></div>
+<div class="col-xs-12 Section-title"><h2>Recycle Rush Scouting Form</h2></div>
 <form action="/form/save" method="post" id="scouting-form"
         class="">
     <div class="row form-group">
@@ -20,25 +20,46 @@
             </div>
         </div>
     </div>
-    <h2>Autonomous</h2>
-    <h4>Auton Starting Position:</h3>
-    <div class="btn-group" role="group" aria-label="...">
-      <button type="button" class="btn btn-default">Behind totes and bins</button>
-      <button type="button" class="btn btn-default">Between auto zone and landfill</button>
+    
+    <h2 class="Section-title">Autonomous</h2>
+    <div class = "row">
+      <div class = "col-md-4">
+        <h4>Auton Starting Position:</h3>
+      </div>
+      <div class = "col-md-4">
+        <div class="btn-group" role="group" aria-label="...">
+          <button type="button" class="btn btn-default">Behind totes and bins</button>
+          <button type="button" class="btn btn-default">Between auto zone and landfill</button>
+        </div>
+      </div>
     </div>
-    <h4>Auton tasks completed</h4>
-    <div class="checkbox">
-      <label><input type="checkbox" value="">Robot moves into auto zone</label>
+    <div class="row">
+      <div class = "col-md-4">
+        <h4>Auton tasks completed</h4>
+      </div>
+      <div class = "col-md-4">
+        <div class="checkbox">
+          <label><input type="checkbox" value="">Robot moves into auto zone</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" value="">Move tote into auto zone</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" value="">Move Recycling container into auto zone</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" value="">3 tote stack!</label>
+        </div>
+      </div>
     </div>
-    <div class="checkbox">
-      <label><input type="checkbox" value="">Move tote into auto zone</label>
+    
+    <h2 class = "Section-title">Teleoperated</h4>
+    <div class="row">
+      <div class = "col-sm-12">
+        <p>To add: tote count, bin count, noodle count, coop stack/set, where they get bins from, penalties</p>
+      </div>
     </div>
-    <div class="checkbox">
-        <label><input type="checkbox" value="">Move Recycling container into auto zone</label>
-    </div>
-    <div class="checkbox">
-      <label><input type="checkbox" value="">3 tote stack!</label>
-    </div>
+    
     
     <div class="row form-group">
         <div class="col-md-8">
