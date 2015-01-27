@@ -8,7 +8,7 @@ def callback():
 
 @route('/test')
 def callback():
-	return '1'
+    return '1'
 
 @route('/form')
 @view('form')
@@ -17,9 +17,9 @@ def callback():
 
 @post('/form/save')
 def callback():
-	print('text1 = %s' % request.forms.get('text1', 'nothing provided'))
-	redirect('/form')
-	
+    print('text1 = %s' % request.forms.get('text1', 'nothing provided'))
+    redirect('/form')
+
 @route('/static/<path:path>')
 def callback(path):
     return static_file(path, 'static')
@@ -31,4 +31,3 @@ def callback(path):
 def main(host, port):
     app = bottle.app()
     app.run(host=host, port=port, debug=True)
-
