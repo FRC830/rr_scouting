@@ -20,6 +20,26 @@
             </div>
         </div>
     </div>
+    <h2>Autonomous</h2>
+    <h4>Auton Starting Position:</h3>
+    <div class="btn-group" role="group" aria-label="...">
+      <button type="button" class="btn btn-default">Behind totes and bins</button>
+      <button type="button" class="btn btn-default">Between auto zone and landfill</button>
+    </div>
+    <h4>Auton tasks completed</h4>
+    <div class="checkbox">
+      <label><input type="checkbox" value="">Robot moves into auto zone</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" value="">Move tote into auto zone</label>
+    </div>
+    <div class="checkbox">
+        <label><input type="checkbox" value="">Move Recycling container into auto zone</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" value="">3 tote stack!</label>
+    </div>
+    
     <div class="row form-group">
         <div class="col-md-8">
             <div class="form-field">
