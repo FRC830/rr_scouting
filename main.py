@@ -1,4 +1,8 @@
-import os, sys, threading, time, urllib2, webbrowser
+import os, sys, threading, time, webbrowser
+if sys.version[0] == '2':
+    from urllib2 import urlopen
+else:
+    from urllib.request import urlopen
 def abspath(p):
     return os.path.join(os.path.dirname(__file__), p)
 sys.path.append(abspath('depends'))
