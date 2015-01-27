@@ -1,6 +1,6 @@
 import bottle
 
-from bottle import redirect, route, static_file, view
+from bottle import post, redirect, request, route, static_file, view
 
 @route('/')
 def callback():
@@ -15,9 +15,18 @@ def callback():
 def callback():
     return dict()
 
+@post('/form/save')
+def callback():
+	print('text1 = %s' % request.forms.get('text1', 'nothing provided'))
+	redirect('/form')
+	
 @route('/static/<path:path>')
 def callback(path):
     return static_file(path, 'static')
+
+@route('/data/<path:path>')
+def callback(path):
+    return static_file(path, 'data')
 
 def main(host, port):
     app = bottle.app()
