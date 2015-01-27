@@ -12,7 +12,8 @@ bottle.TEMPLATE_PATH.append('web')
 
 def server_running():
     try:
-        if urllib2.urlopen('http://localhost:8000/test').read() == '1':
+        c = urlopen('http://localhost:8000/test').read()
+        if c == '1' or c == b'1':
             return True
     except Exception:
         pass
