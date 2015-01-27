@@ -10,6 +10,9 @@ $(function() {
                 minlength: 1,
                 maxlength: 15,
                 required: true
+            },
+            auton_start: {
+                required: true
             }
         },
         highlight: function(element) {
@@ -21,9 +24,10 @@ $(function() {
         errorElement: 'span',
         errorClass: 'help-block',
         errorPlacement: function(error, element) {
-            if(element.parent('.input-group').length) {
-                error.insertAfter(element.parent());
-            } else {
+            if(element.closest('.form-field').length) {
+                error.appendTo(element.closest('.form-field').find('.error-placeholder'));
+            }
+            else {
                 error.insertAfter(element);
             }
         }
