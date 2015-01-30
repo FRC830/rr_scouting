@@ -59,45 +59,88 @@
     </div>
 
     <h3>Teleoperated</h3>
+    <div>
+        <p>To add: tote count, how high can they build?, bin count, noodle count, noodle manipulation:(push on ground, pick up, get from hp), good noodle thrower on alliance?, coop stack/set, where they get bins from, penalties, bottom or top stack, bulldozer or other?</p>
+    </div>
+    
     <div class="row">
-        <div class="col-sm-12">
-            <p>To add: tote count, how high can they build?, bin count, noodle count, noodle manipulation:(push on ground, pick up, get from hp), good noodle thrower on alliance?, coop stack/set, where they get bins from, penalties, bottom or top stack, bulldozer or other?</p>
-        </div>
-        <label for="totes_stacked" class="col-md-4 col-xs-6 control-label">Totes Stacked On Platform:</label>
-        <div class="col-md-4 col-xs-6">
+        <label for="totes_stacked" class="col-md-2 control-label">Totes Stacked On Platform:</label>
+        <div class="col-md-1">
             <input id="totes_stacked" name="totes_stacked" type="number" class="form-control"/>
             <span class="error-placeholder"></span>
         </div>
+        <label for="bins_stacked" class="col-md-2 control-label">Highest Tote Stack:</label>
+        <div class="col-md-1">
+            <label><input type="radio" name="tote_height" id="tote_height" value="1">1 tote high</label>
+        </div>
+        <div class="col-md-1">
+            <label><input type="radio" name="tote_height" id="tote_height" value="2">2 totes high</label>
+        </div>
+        <div class="col-md-1">
+            <label><input type="radio" name="tote_height" id="tote_height" value="3">3 totes high</label>
+        </div>
+        <div class="col-md-1">
+            <label><input type="radio" name="tote_height" id="tote_height" value="4">4 totes high</label>
+        </div>
+        <div class="col-md-1">
+            <label><input type="radio" name="tote_height" id="tote_height" value="5">5 totes high</label>
+        </div>
+        <div class="col-md-1">
+            <label><input type="radio" name="tote_height" id="tote_height" value="6">6 totes high</label>
+        </div>
     </div>
+    
     <div class="row">
-        <label for="bins_stacked" class="col-sm-2 control-label">Recycling Containers Stackified:</label>
-        <div class="col-sm-1">
-            <input id="bins_stacked" name="bins_stacked" type="number" class="form-control"/>
+        <label for="bins_stacked" class="col-md-2 control-label">Recycling Containers Stackified:</label>
+        <div class="col-md-1">
+            <input id="bin_height" name="bin_height" type="number" class="form-control"/>
             <span class="error-placeholder"></span>
         </div>
-        <div class="col-sm-1">
+        <div class="col-md-1">
             <label><input type="radio" name="bin_height" id="bin_height" value="1">1 tote high</label>
         </div>
-        <div class="col-sm-1">
+        <div class="col-md-1">
             <label><input type="radio" name="bin_height" id="bin_height" value="2">2 totes high</label>
         </div>
-        <div class="col-sm-1">
+        <div class="col-md-1">
             <label><input type="radio" name="bin_height" id="bin_height" value="3">3 totes high</label>
         </div>
-                <div class="col-sm-1">
+        <div class="col-md-1">
             <label><input type="radio" name="bin_height" id="bin_height" value="4">4 totes high</label>
         </div>
-        <div class="col-sm-1">
+        <div class="col-md-1">
             <label><input type="radio" name="bin_height" id="bin_height" value="5">5 totes high</label>
         </div>
-        <div class="col-sm-1">
+        <div class="col-md-1">
             <label><input type="radio" name="bin_height" id="bin_height" value="6">6 totes high</label>
         </div>
-        <div class="col-sm-1">
+        <div class="col-md-1">
             <label><input type="checkbox">Noodle in the bin?</label>
         </div>
     </div>
 
+    <div class = "row">
+      <h4>Noodle Handling:</h4>
+      <div class = "col-md-3">
+        <label><input type="checkbox">Pushing noodles on the ground</label>
+      </div>
+      <div class = "col-md-3">
+        <label><input type="checkbox">Pick up noodles from ground</label>
+      </div>
+      <div class = "col-md-3">
+        <label><input type="checkbox">Get noodles from human player</label>
+      </div>
+    </div>
+    
+    <div class = "row">
+      <h4>Coopertition</h4>
+      <div class = "col-md-2">
+        <label><input type="radio" name="coop" id="coop" value="stack">coopertition 4 tote set</label>
+      </div>
+      <div class = "col-md-2">
+        <label><input type="radio" name="coop" id="coop" value="between">coopertition 4 tote stack</label>
+      </div>
+    </div>
 
     <div class="row form-group">
         <div class="col-md-8">
