@@ -1,7 +1,11 @@
 % rebase('base.tpl', title='Scouting form')
-<div class="col-xs-12 Section-title"><h2>Recycle Rush Scouting Form</h2></div>
-<form action="/form/save" method="post" id="scouting-form"
-        class="">
+<div class="col-xs-12 Section-title">
+  <h2>
+    <img src="static/logo.png" height="50px"/>
+    Recycle Rush Scouting Form
+  </h2>
+</div>
+<form action="/form/save" method="post" id="scouting-form" class="">
     <div class="row form-group">
         <div class="col-md-4">
             <div class="form-field">
