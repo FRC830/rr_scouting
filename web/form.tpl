@@ -59,6 +59,37 @@
         <div class="col-sm-12">
             <p>To add: tote count, bin count, noodle count, coop stack/set, where they get bins from, penalties</p>
         </div>
+        <label for="totes_stacked" class="col-md-4 col-xs-6 control-label">Totes Stacked On Platform:</label>
+        <div class="col-md-4 col-xs-6">
+            <input id="totes_stacked" name="totes_stacked" type="number" class="form-control"/>
+            <span class="error-placeholder"></span>
+        </div>
+    </div>
+    <div class="row">
+        <label for="bins_stacked" class="col-sm-2 control-label">Recycling Containers Stackified:</label>
+        <div class="col-sm-2">
+            <input id="bins_stacked" name="bins_stacked" type="number" class="form-control"/>
+            <span class="error-placeholder"></span>
+        </div>
+        <div class="col-sm-1">
+            <label><input type="radio" name="bin_height" id="bin_height" value="1">1 tote high</label>
+        </div>
+                <div class="col-sm-1">
+            <label><input type="radio" name="bin_height" id="bin_height" value="2">2 totes high</label>
+        </div>
+                <div class="col-sm-1">
+            <label><input type="radio" name="bin_height" id="bin_height" value="3">3 totes high</label>
+        </div>
+                <div class="col-sm-1">
+            <label><input type="radio" name="bin_height" id="bin_height" value="4">4 totes high</label>
+        </div>
+                <div class="col-sm-1">
+            <label><input type="radio" name="bin_height" id="bin_height" value="5">5 totes high</label>
+        </div>
+                <div class="col-sm-1">
+            <label><input type="radio" name="bin_height" id="bin_height" value="6">6 totes high</label>
+        </div>
+        
     </div>
 
 
