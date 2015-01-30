@@ -63,7 +63,23 @@
         <p>To add: tote count, how high can they build?, bin count, noodle count, noodle manipulation:(push on ground, pick up, get from hp), good noodle thrower on alliance?, coop stack/set, where they get bins from, penalties, bottom or top stack, bulldozer or other?</p>
     </div>
     
-    <div class="row">
+    <div class = "row section">
+      <h4>Stacking capabilities:</h4>
+      <div class = "col-md-3">
+        <label><input type="checkbox">Add totes to bottom (bottom stacker)</label>
+      </div>
+      <div class = "col-md-3">
+        <label><input type="checkbox">Add totes to top (top stacker)</label>
+      </div>
+      <div class = "col-md-3">
+        <label><input type="checkbox">Bulldozer/pusher</label>
+      </div>
+      <div class = "col-md-3">
+        <label><input type="checkbox">Other (special snowflake)</label>
+      </div>
+    </div>
+    
+    <div class="row section">
         <label for="totes_stacked" class="col-md-2 control-label">Totes Stacked On Platform:</label>
         <div class="col-md-1">
             <input id="totes_stacked" name="totes_stacked" type="number" class="form-control"/>
@@ -90,7 +106,7 @@
         </div>
     </div>
     
-    <div class="row">
+    <div class="row section">
         <label for="bins_stacked" class="col-md-2 control-label">Recycling Containers Stackified:</label>
         <div class="col-md-1">
             <input id="bin_height" name="bin_height" type="number" class="form-control"/>
@@ -119,7 +135,7 @@
         </div>
     </div>
 
-    <div class = "row">
+    <div class = "row section">
       <h4>Noodle Handling:</h4>
       <div class = "col-md-3">
         <label><input type="checkbox">Pushing noodles on the ground</label>
@@ -132,7 +148,7 @@
       </div>
     </div>
     
-    <div class = "row">
+    <div class = "row section">
       <h4>Coopertition</h4>
       <div class = "col-md-2">
         <label><input type="radio" name="coop" id="coop" value="stack">coopertition 4 tote set</label>
@@ -141,7 +157,16 @@
         <label><input type="radio" name="coop" id="coop" value="between">coopertition 4 tote stack</label>
       </div>
     </div>
-
+    
+    <div class = "row section">
+      <div class = "col-md-1">
+        <h4>Penalties</h4>
+      </div>
+      <div class="col-md-1">
+        <input id="penalties" name="penalties" type="number" class="form-control"/>
+        <span class="error-placeholder"></span>
+      </div>
+    </div>
     <div class="row form-group">
         <div class="col-md-8">
             <div class="form-field">
