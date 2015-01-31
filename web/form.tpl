@@ -28,33 +28,33 @@
     </div>
 
     <h3>Autonomous</h3>
-    <div class="row form-field">
-        <div class="col-md-3">
-            <label>Auton Starting Position:</label>
+    <div class="row form-field section">
+        <div class="col-md-4">
+            <h4>Aunon Starting Position</h4>
             <span class="error-placeholder"></span>
         </div>
-        <div class="col-md-5">
-            <label><input type="radio" name="auton_start" id="auton_start" value="behind"> Behind totes and bins</label>
-            <label><input type="radio" name="auton_start" id="auton_start" value="between"> Between auto zone and landfill</label>
+        <div class="col-md-4">
+          <label><input type="radio" name="auton_start" id="auton_start" value="behind">Auto zone</label>
+        </div>
+        <div class = "col-md-4">
+          <label><input type="radio" name="auton_start" id="auton_start" value="between">Between auto zone and landfill</label>
         </div>
     </div>
-    <div class="row form-field">
-        <div class="col-md-3">
-            <label>Auton tasks completed</label>
+    <div class="row form-field section">
+        <div>
+            <h4>Tasks completed:</h4>
         </div>
-        <div class="col-md-5">
-            <div class="row">
-                <label><input type="checkbox"> Robot moves into auto zone</label>
-            </div>
-            <div class="row">
-                <label><input type="checkbox"> Move tote into auto zone</label>
-            </div>
-            <div class="row">
-                <label><input type="checkbox"> Move Recycling container into auto zone</label>
-            </div>
-            <div class="row">
-                <label><input type="checkbox"> 3 tote stack!</label>
-            </div>
+        <div class="col-md-3">
+            <label><input type="checkbox"> Robot moves into auto zone</label>
+        </div>
+        <div class="col-md-3">
+            <label><input type="checkbox"> Move tote into auto zone</label>
+        </div>
+        <div class="col-md-3">
+            <label><input type="checkbox"> Move Recycling container into auto zone</label>
+        </div>
+        <div class="col-md-3">
+            <label><input type="checkbox"> 3 tote stack!</label>
         </div>
     </div>
 
@@ -80,57 +80,59 @@
     </div>
     
     <div class="row section">
-        <label for="totes_stacked" class="col-md-2 control-label">Totes Stacked On Platform:</label>
-        <div class="col-md-1">
-            <input id="totes_stacked" name="totes_stacked" type="number" class="form-control"/>
-            <span class="error-placeholder"></span>
-        </div>
-        <label for="bins_stacked" class="col-md-2 control-label">Highest Tote Stack:</label>
-        <div class="col-md-1">
-            <label><input type="radio" name="tote_height" id="tote_height" value="1">1 tote high</label>
-        </div>
-        <div class="col-md-1">
-            <label><input type="radio" name="tote_height" id="tote_height" value="2">2 totes high</label>
-        </div>
-        <div class="col-md-1">
-            <label><input type="radio" name="tote_height" id="tote_height" value="3">3 totes high</label>
-        </div>
-        <div class="col-md-1">
-            <label><input type="radio" name="tote_height" id="tote_height" value="4">4 totes high</label>
-        </div>
-        <div class="col-md-1">
-            <label><input type="radio" name="tote_height" id="tote_height" value="5">5 totes high</label>
-        </div>
-        <div class="col-md-1">
-            <label><input type="radio" name="tote_height" id="tote_height" value="6">6 totes high</label>
-        </div>
+      <label for="totes_stacked" class="col-md-2 col-sm-4 control-label"><h4>Totes Stacked On Platform:</h4></label>
+      <div class="col-md-1 col-sm-8">
+        <input id="totes_stacked" name="totes_stacked" type="number" class="form-control"/>
+        <span class="error-placeholder"></span>
+      </div>
+    </div>
+    <div class="row section">
+      <label for="bins_stacked" class="col-md-2 col-sm-2 control-label"><h4>Highest Tote Stack:</h4></label>
+      <div class="col-md-1 col-sm-3">
+          <label><input type="radio" name="tote_height" id="tote_height" value="1">1 tote high</label>
+      </div>
+      <div class="col-md-1 col-sm-3">
+          <label><input type="radio" name="tote_height" id="tote_height" value="2">2 totes high</label>
+      </div>
+      <div class="col-md-1 col-sm-3">
+          <label><input type="radio" name="tote_height" id="tote_height" value="3">3 totes high</label>
+      </div>
+      <div class="col-md-1 col-sm-3">
+          <label><input type="radio" name="tote_height" id="tote_height" value="4">4 totes high</label>
+      </div>
+      <div class="col-md-1 col-sm-3">
+          <label><input type="radio" name="tote_height" id="tote_height" value="5">5 totes high</label>
+      </div>
+      <div class="col-md-1 col-sm-3">
+          <label><input type="radio" name="tote_height" id="tote_height" value="6">6 totes high</label>
+      </div>
     </div>
     
     <div class="row section">
-        <label for="bins_stacked" class="col-md-2 control-label">Recycling Containers Stackified:</label>
-        <div class="col-md-1">
+        <label for="bins_stacked" class="col-md-2 col-sm-6 control-label"><h4>Recycling Containers Stackified:</h4></label>
+        <div class="col-md-1 col-sm-6">
             <input id="bin_height" name="bin_height" type="number" class="form-control"/>
             <span class="error-placeholder"></span>
         </div>
-        <div class="col-md-1">
+        <div class="col-md-1 col-sm-3">
             <label><input type="radio" name="bin_height" id="bin_height" value="1">1 tote high</label>
         </div>
-        <div class="col-md-1">
+        <div class="col-md-1 col-sm-3">
             <label><input type="radio" name="bin_height" id="bin_height" value="2">2 totes high</label>
         </div>
-        <div class="col-md-1">
+        <div class="col-md-1 col-sm-3">
             <label><input type="radio" name="bin_height" id="bin_height" value="3">3 totes high</label>
         </div>
-        <div class="col-md-1">
+        <div class="col-md-1 col-sm-3">
             <label><input type="radio" name="bin_height" id="bin_height" value="4">4 totes high</label>
         </div>
-        <div class="col-md-1">
+        <div class="col-md-1 col-sm-3">
             <label><input type="radio" name="bin_height" id="bin_height" value="5">5 totes high</label>
         </div>
-        <div class="col-md-1">
+        <div class="col-md-1 col-sm-3">
             <label><input type="radio" name="bin_height" id="bin_height" value="6">6 totes high</label>
         </div>
-        <div class="col-md-1">
+        <div class="col-md-1 col-sm-3">
             <label><input type="checkbox">Noodle in the bin?</label>
         </div>
     </div>
@@ -149,12 +151,22 @@
     </div>
     
     <div class = "row section">
-      <h4>Coopertition</h4>
+      <h4>Coopertition (that they contributed to)</h4>
       <div class = "col-md-2">
         <label><input type="radio" name="coop" id="coop" value="stack">coopertition 4 tote set</label>
       </div>
       <div class = "col-md-2">
         <label><input type="radio" name="coop" id="coop" value="between">coopertition 4 tote stack</label>
+      </div>
+    </div>
+    
+    <div class = "row section">
+      <h4>Step capabilities</h4>
+      <div class = "col-md-3">
+        <label><input type="checkbox">Recycling containers from the step</label>
+      </div>
+      <div class = "col-md-3">
+        <label><input type="checkbox">Totes from the step</label>
       </div>
     </div>
     
@@ -167,6 +179,22 @@
         <span class="error-placeholder"></span>
       </div>
     </div>
+    
+    <div class="row section">
+      <div class="col-md-3 col-sm-3">
+        <h3>Match Result:</h3>
+      </div>
+      <div class="col-md-3 col-sm-3">
+        <label><input type="radio" name="result" id="result" value="1">Win</label>
+      </div>
+      <div class="col-md-3 col-sm-3">
+        <label><input type="radio" name="result" id="result" value="0">Loss</label>
+      </div>
+      <div class="col-md-3 col-sm-3">
+        <label><input type="radio" name="result" id="result" value="0.5">Tie</label>
+      </div>
+    </div>
+    
     <div class="row form-group">
         <div class="col-md-8">
             <div class="form-field">
