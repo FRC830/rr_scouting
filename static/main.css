@@ -18,3 +18,9 @@ div.content {
 {
     outline: none;
 }*/
+
+.has-error input[type=text],
+.has-error input[type=number]
+{
+    background-color: #fdd;
+}

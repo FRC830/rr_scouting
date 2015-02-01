@@ -34,8 +34,7 @@
     <h3>Autonomous</h3>
     <div class="row form-field section">
         <div class="col-md-4">
-            <h4>Aunon Starting Position</h4>
-            <span class="error-placeholder"></span>
+            <h4>Auton Starting Position</h4>
         </div>
         <div class="col-md-4">
           <label><input type="radio" name="auton_start" id="auton_start" value="behind">Auto zone</label>
