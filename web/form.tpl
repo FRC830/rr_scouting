@@ -1,7 +1,7 @@
 % rebase('base.tpl', title='Scouting form')
 <div class="col-xs-12 Section-title">
   <h2>
-    <img src="static/logo.png" height="50px"/>
+    <img src="/static/logo.png" height="50px"/>
     Recycle Rush Scouting Form
   </h2>
 </div>
@@ -81,8 +81,10 @@
     
     <div class="row section">
       <label for="totes_stacked" class="col-md-2 col-sm-4 control-label"><h4>Totes Stacked On Platform:</h4></label>
-      <div class="col-md-1 col-sm-8">
-        <input id="totes_stacked" name="totes_stacked" type="number" class="form-control"/>
+      <div class="col-md-2 col-sm-8">
+        <span class="input-group form-field">
+          <input id="totes_stacked" name="totes_stacked" type="number" class="form-control custom-spinner"/>
+        </span>
         <span class="error-placeholder"></span>
       </div>
     </div>
@@ -110,9 +112,11 @@
     
     <div class="row section">
         <label for="bins_stacked" class="col-md-2 col-sm-6 control-label"><h4>Recycling Containers Stackified:</h4></label>
-        <div class="col-md-1 col-sm-6">
-            <input id="bin_height" name="bin_height" type="number" class="form-control"/>
-            <span class="error-placeholder"></span>
+        <div class="col-md-2 col-sm-6">
+          <span class="input-group form-field">
+            <input id="bin_height" name="bin_height" type="number" class="form-control custom-spinner"/>
+          </span>
+          <span class="error-placeholder"></span>
         </div>
         <div class="col-md-1 col-sm-3">
             <label><input type="radio" name="bin_height" id="bin_height" value="1">1 tote high</label>
@@ -181,26 +185,22 @@
     </div>
     
     <div class="row section">
-      <div class="col-md-3 col-sm-3">
+      <div class="col-md-3">
         <h3>Match Result:</h3>
       </div>
-      <div class="col-md-3 col-sm-3">
-        <label><input type="radio" name="result" id="result" value="1">Win</label>
-      </div>
-      <div class="col-md-3 col-sm-3">
-        <label><input type="radio" name="result" id="result" value="0">Loss</label>
-      </div>
-      <div class="col-md-3 col-sm-3">
-        <label><input type="radio" name="result" id="result" value="0.5">Tie</label>
+      <div class="col-md-3 btn-group" data-toggle="buttons">
+        <label class="btn btn-primary"><input type="radio" name="result" id="result" value="1">Win</label>
+        <label class="btn btn-primary"><input type="radio" name="result" id="result" value="0">Loss</label>
+        <label class="btn btn-primary"><input type="radio" name="result" id="result" value="0.5">Tie</label>
       </div>
     </div>
     
     <div class="row form-group">
-        <div class="col-md-8">
-            <div class="form-field">
-                <input type="submit" class="btn btn-success pull-right" value="Submit"/>
-            </div>
+      <div class="col-md-8">
+        <div class="form-field">
+          <input type="submit" class="btn btn-success pull-right" value="Submit"/>
         </div>
+      </div>
     </div>
 </form>
 <script src="/static/jquery.validate.min.js"></script>

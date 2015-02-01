@@ -1,4 +1,7 @@
 $(function() {
+    function mkbutton() {
+        return $('<a>').attr('href', '#').addClass('btn btn-default').click(function(e){e.preventDefault();});
+    }
     $('form#scouting-form').validate({
         rules: {
             match_id: {
@@ -13,7 +16,15 @@ $(function() {
             },
             auton_start: {
                 required: true
-            }
+            },
+            totes_stacked: {
+                minlength: 1,
+                required: true
+            },
+            bin_height: {
+                minlength: 1,
+                required: true
+            },
         },
         highlight: function(element) {
             $(element).closest('.form-field').addClass('has-error');
@@ -24,45 +35,21 @@ $(function() {
         errorElement: 'span',
         errorClass: 'help-block',
         errorPlacement: function(error, element) {
-            if(element.closest('.form-field').length) {
-                error.appendTo(element.closest('.form-field').find('.error-placeholder'));
-            }
-            else {
-                error.insertAfter(element);
-            }
+            // disable messages
+            return true;
         }
     });
-    function get_field_id(a, b) {
-        return 'form-' + a + '-' + b;
-    }
-    if (window.localStorage && window.localStorage.getItem) {
-        $('form').each(function(i, form) {
-            var form_id = $(form).attr('id');
-            if (!form_id)
-                return;
-            if (location.href.indexOf('/clear') != -1) {
-                $(form).find('input').each(function(i, field) {
-                    var field_id = $(field).attr('id');
-                    if (!field_id)
-                        return;
-                    localStorage.setItem(get_field_id(form_id, field_id), $(this).val());
-                });
-                location.href = location.href.replace('/clear', '');
-                return;
+    $(window).bind('beforeunload', function () {
+        return 'If you leave this page, all data not submitted will be lost';
+    });
+    $('input[type=number].custom-spinner').each(function(i, e) {
+        var increment = function(n) {
+            return function() {
+                $(e).trigger('keyup');
+                $(e).val(Number($(e).val()) + n);
             }
-            $(form).find('input').each(function(i, field) {
-                var field_id = $(field).attr('id');
-                if (!field_id)
-                    return;
-                $(field).val(localStorage.getItem(get_field_id(form_id, field_id)));
-            });
-        });
-        $('input').on('click keyup', function(event) {
-            var field_id = $(this).attr('id'),
-                form_id = $(this).parents('form').attr('id');
-            if (!field_id || !form_id)
-                return;
-            localStorage.setItem(get_field_id(form_id, field_id), $(this).val());
-        });
-    }
+        }
+        mkbutton().addClass('input-group-addon').text('+').insertAfter($(e)).click(increment(1));
+        mkbutton().addClass('input-group-addon').text('-').insertBefore($(e)).click(increment(-1));
+    });
 });

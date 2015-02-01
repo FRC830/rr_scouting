@@ -11,15 +11,16 @@ def callback():
     return '1'
 
 @route('/form')
-@route('/form/clear')
 @view('form')
 def callback():
     return dict()
 
 @post('/form/save')
 def callback():
-    print('text1 = %s' % request.forms.get('text1', 'nothing provided'))
-    redirect('/form/clear')
+    #print('text1 = %s' % request.forms.get('text1', 'nothing provided'))
+    for k in request.forms:
+        print('%s -> %s' % (k, request.forms[k]))
+    redirect('/form')
 
 @route('/static/<path:path>')
 def callback(path):
