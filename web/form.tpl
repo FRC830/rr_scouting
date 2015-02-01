@@ -46,7 +46,7 @@
       </div>
       <div class="col-md-8 btn-group" data-toggle="buttons">
         <label class="btn btn-default">
-          <input type="radio" name="auton_start" id="auton_start" value="zone">Auto zone
+          <input type="radio" name="auton_start" id="auton_start" value="zone">Staging zone
         </label>
         <label class="btn btn-default">
           <input type="radio" name="auton_start" id="auton_start" value="middle">Between auto zone and landfill
@@ -185,7 +185,9 @@
         <h4>Penalties</h4>
       </div>
       <div class = "col-md-2">
-        <input id="penalties" name="penalties" type="number" class="form-control"/>
+        <span class="input-group form-field">
+          <input id="penalties" name="penalties" type="number" class="form-control custom-spinner"/>
+        </span>
       </div>
     </div>
     
@@ -198,12 +200,24 @@
         <label class="btn btn-default"><input type="radio" name="result" id="result" value="0">Loss</label>
         <label class="btn btn-default"><input type="radio" name="result" id="result" value="0.5">Tie</label>
       </div>
-      <div class="col-md-4">
+    </div>
+    <div class="row section">
+      <div class="col-md-2 col-sm-2">
+        <h4>Comments:</h4>
+      </div>
+      <div class="col-md-10 col-sm-10">
+        <textarea id="comments" name="comments" placeholder="Exceptional noodle thrower, good alliance choice, robot malfunction..." class="com-field"></textarea>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
         <div class="form-field">
           <input type="submit" class="btn btn-success pull-right" value="Submit"/>
         </div>
       </div>
     </div>
+    
 </form>
 <script src="/static/jquery.validate.min.js"></script>
 <script src="/static/form.js"></script>
