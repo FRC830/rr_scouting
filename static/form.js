@@ -39,6 +39,38 @@ $(function() {
             return true;
         }
     });
+    function requestFullscreen() {
+        var doc = window.document.documentElement;
+        if (doc.requestFullscreen)
+            return doc.requestFullscreen();
+        else if (doc.webkitRequestFullscreen)
+            return doc.webkitRequestFullscreen();
+        else if (doc.mozRequestFullScreen)
+            return doc.mozRequestFullScreen();
+        else if (doc.msRequestFullscreen)
+            return doc.msRequestFullscreen();
+        else
+            return false;
+    }
+    function exitFullscreen() {
+        var doc = window.document.documentElement;
+        if (doc.exitFullscreen)
+            return doc.exitFullscreen();
+        else if (doc.webkitExitFullscreen)
+            return doc.webkitExitFullscreen();
+        else if (doc.mozExitFullScreen)
+            return doc.mozExitFullScreen();
+        else if (doc.msExitFullscreen)
+            return doc.msExitFullscreen();
+        else
+            return false;
+    }
+    var in_fullscreen = false;
+    $('.fullscreen-toggle').click(function() {
+        if ((in_fullscreen && exitFullscreen()) || (!in_fullscreen && requestFullscreen())) {
+            $(this).toggleClass('glyphicon-fullscreen glyphicon-resize-small')
+        }
+    });
     /*
     $(window).bind('beforeunload', function () {
         return 'If you leave this page, all data not submitted will be lost';

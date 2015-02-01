@@ -4,6 +4,10 @@
     <img src="/static/logo.png" height="50px"/>
     Recycle Rush Scouting Form
   </h2>
+<!--  <a class="pull-right flat-button fullscreen-toggle">
+    Fullscreen
+    <span class="glyphicon glyphicon-fullscreen"></span>
+  </a>-->
 </div>
 <form action="/form/save" method="post" id="scouting-form" class="">
     <div class="row form-group">
