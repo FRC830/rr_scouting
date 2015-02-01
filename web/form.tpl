@@ -13,24 +13,30 @@
 </div>
 <form action="/form/save" method="post" id="scouting-form" class="">
     <div class="row form-group">
-        <div class="col-md-4">
-            <div class="form-field">
-                <label for="match_id" class="col-md-4 col-xs-6 control-label">Match #</label>
-                <div class="col-md-8 col-xs-6">
-                    <input id="match_id" name="match_id" type="number" class="form-control"/>
-                    <span class="error-placeholder"></span>
-                </div>
+      <div class="col-md-4">
+        <h2>
+          <img src="/static/logo.png" width="50px"/>
+          Recycle Rush Scouting Form
+        </h2>
+      </div>
+      <div class="col-md-3">
+        <div class="form-field">
+            <label for="match_id" class="col-md-3 col-xs-4 control-label">Match #</label>
+            <div class="col-md-8 col-xs-6">
+                <input id="match_id" name="match_id" type="number" class="form-control"/>
+                <span class="error-placeholder"></span>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="form-field">
-                <label for="team_id" class="col-md-4 col-xs-6 control-label">Team #</label>
-                <div class="col-md-8 col-xs-6">
-                    <input id="team_id" name="team_id" type="number" class="form-control"/>
-                    <span class="error-placeholder"></span>
-                </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-field">
+            <label for="team_id" class="col-md-3 col-xs-4 control-label">Team #</label>
+            <div class="col-md-8 col-xs-6">
+                <input id="team_id" name="team_id" type="number" class="form-control"/>
+                <span class="error-placeholder"></span>
             </div>
         </div>
+      </div>
     </div>
 
     <h3>Autonomous</h3>
@@ -40,18 +46,21 @@
       </div>
       <div class="col-md-8 btn-group" data-toggle="buttons">
         <label class="btn btn-default">
-          <input type="radio" name="auton_start" id="auton_start" value="move">Auto zone
+          <input type="radio" name="auton_start" id="auton_start" value="zone">Auto zone
         </label>
         <label class="btn btn-default">
-          <input type="radio" name="auton_start" id="auton_start" value="tote">Between auto zone and landfill
+          <input type="radio" name="auton_start" id="auton_start" value="middle">Between auto zone and landfill
+        </label>
+        <label class="btn btn-default">
+          <input type="radio" name="auton_start" id="auton_start" value="other">other
         </label>
       </div>
     </div>
     <div class="row form-field section">
-        <div class="col-md-2">
-            <h4>Tasks completed:</h4>
+        <div class="col-md-3">
+            <h4>Auton tasks completed:</h4>
         </div>
-        <div class="col-md-10 btn-group" data-toggle="buttons">
+        <div class="col-md-9 btn-group" data-toggle="buttons">
           <label class="btn btn-default">
             <input type="checkbox" name="auton_tasks" id="auton_tasks" value="move">Robot moves into auto zone
           </label>
@@ -89,7 +98,7 @@
     </div>
     
     <div class="row section">
-      <label for="totes_stacked" class="col-md-2 col-sm-4 control-label"><h4>Totes Stacked On Platform:</h4></label>
+      <label for="totes_stacked" class="col-md-3 col-sm-4 control-label"><h4>Totes Stacked On Platform:</h4></label>
       <div class="col-md-2 col-sm-8">
         <span class="input-group form-field">
           <input id="totes_stacked" name="totes_stacked" type="number" class="form-control custom-spinner"/>
@@ -102,6 +111,7 @@
         <h4>Highest Tote Stack:</h4>
       </div>
       <div class="col-md-10 col-sm-12 btn-group" data-toggle="buttons">
+        <label class="btn btn-default"><input type="radio" name="tote_height" id="tote_height" value="1">0 totes high</label>
         <label class="btn btn-default"><input type="radio" name="tote_height" id="tote_height" value="1">1 tote high</label>
         <label class="btn btn-default"><input type="radio" name="tote_height" id="tote_height" value="2">2 totes high</label>
         <label class="btn btn-default"><input type="radio" name="tote_height" id="tote_height" value="3">3 totes high</label>
