@@ -1,9 +1,11 @@
 % rebase('base.tpl', title='Scouting form')
 <div class="col-xs-12 Section-title">
+<!--Commented to allow form to fit without scrolling, uncomment if you want
   <h2>
     <img src="/static/logo.png" height="50px"/>
     Recycle Rush Scouting Form
   </h2>
+-->
 <!--  <a class="pull-right flat-button fullscreen-toggle">
     Fullscreen
     <span class="glyphicon glyphicon-fullscreen"></span>
@@ -33,39 +35,39 @@
 
     <h3>Autonomous</h3>
     <div class="row form-field section">
-        <div class="col-md-4">
-            <h4>Auton Starting Position</h4>
-        </div>
-        <div class="col-md-4">
-          <label><input type="radio" name="auton_start" id="auton_start" value="behind">Auto zone</label>
-        </div>
-        <div class = "col-md-4">
-          <label><input type="radio" name="auton_start" id="auton_start" value="between">Between auto zone and landfill</label>
-        </div>
+      <div class="col-md-2">
+          <h4>Auton Starting Position</h4>
+      </div>
+      <div class="col-md-8 btn-group" data-toggle="buttons">
+        <label class="btn btn-default">
+          <input type="radio" name="auton_start" id="auton_start" value="move">Auto zone
+        </label>
+        <label class="btn btn-default">
+          <input type="radio" name="auton_start" id="auton_start" value="tote">Between auto zone and landfill
+        </label>
+      </div>
     </div>
     <div class="row form-field section">
-        <div>
+        <div class="col-md-2">
             <h4>Tasks completed:</h4>
         </div>
-        <div class="col-md-3">
-            <label><input type="checkbox"> Robot moves into auto zone</label>
-        </div>
-        <div class="col-md-3">
-            <label><input type="checkbox"> Move tote into auto zone</label>
-        </div>
-        <div class="col-md-3">
-            <label><input type="checkbox"> Move Recycling container into auto zone</label>
-        </div>
-        <div class="col-md-3">
-            <label><input type="checkbox"> 3 tote stack!</label>
+        <div class="col-md-10 btn-group" data-toggle="buttons">
+          <label class="btn btn-default">
+            <input type="checkbox" name="auton_tasks" id="auton_tasks" value="move">Robot moves into auto zone
+          </label>
+          <label class="btn btn-default">
+            <input type="checkbox" name="auton_tasks" id="auton_tasks" value="tote">Move tote into auto zone
+          </label>
+          <label class="btn btn-default">
+            <input type="checkbox" name="auton_tasks" id="auton_tasks" value="container">Move Recycling container into auto zone
+          </label>
+          <label class="btn btn-default">
+            <input type="checkbox" name="auton_tasks" id="auton_tasks" value="stack">3 tote stack!
+          </label>
         </div>
     </div>
 
     <h3>Teleoperated</h3>
-    <div>
-        <p>To add: tote count, how high can they build?, bin count, noodle count, noodle manipulation:(push on ground, pick up, get from hp), good noodle thrower on alliance?, coop stack/set, where they get bins from, penalties, bottom or top stack, bulldozer or other?</p>
-    </div>
-    
     <div class = "row section">
       <div class="col-md-2 col-sm-12">
         <h4>Stacking capabilities:</h4>
@@ -96,56 +98,39 @@
       </div>
     </div>
     <div class="row section">
-      <label for="bins_stacked" class="col-md-2 col-sm-2 control-label"><h4>Highest Tote Stack:</h4></label>
-      <div class="col-md-1 col-sm-3">
-          <label><input type="radio" name="tote_height" id="tote_height" value="1">1 tote high</label>
+      <div class="col-md-2 col-sm-12">
+        <h4>Highest Tote Stack:</h4>
       </div>
-      <div class="col-md-1 col-sm-3">
-          <label><input type="radio" name="tote_height" id="tote_height" value="2">2 totes high</label>
-      </div>
-      <div class="col-md-1 col-sm-3">
-          <label><input type="radio" name="tote_height" id="tote_height" value="3">3 totes high</label>
-      </div>
-      <div class="col-md-1 col-sm-3">
-          <label><input type="radio" name="tote_height" id="tote_height" value="4">4 totes high</label>
-      </div>
-      <div class="col-md-1 col-sm-3">
-          <label><input type="radio" name="tote_height" id="tote_height" value="5">5 totes high</label>
-      </div>
-      <div class="col-md-1 col-sm-3">
-          <label><input type="radio" name="tote_height" id="tote_height" value="6">6 totes high</label>
+      <div class="col-md-10 col-sm-12 btn-group" data-toggle="buttons">
+        <label class="btn btn-default"><input type="radio" name="tote_height" id="tote_height" value="1">1 tote high</label>
+        <label class="btn btn-default"><input type="radio" name="tote_height" id="tote_height" value="2">2 totes high</label>
+        <label class="btn btn-default"><input type="radio" name="tote_height" id="tote_height" value="3">3 totes high</label>
+        <label class="btn btn-default"><input type="radio" name="tote_height" id="tote_height" value="4">4 totes high</label>
+        <label class="btn btn-default"><input type="radio" name="tote_height" id="tote_height" value="5">5 totes high</label>
+        <label class="btn btn-default"><input type="radio" name="tote_height" id="tote_height" value="6">6 totes high</label>
       </div>
     </div>
     
     <div class="row section">
-        <label for="bins_stacked" class="col-md-2 col-sm-6 control-label"><h4>Recycling Containers Stackified:</h4></label>
-        <div class="col-md-2 col-sm-6">
-          <span class="input-group form-field">
-            <input id="bin_height" name="bin_height" type="number" class="form-control custom-spinner"/>
-          </span>
-          <span class="error-placeholder"></span>
-        </div>
-        <div class="col-md-1 col-sm-3">
-            <label><input type="radio" name="bin_height" id="bin_height" value="1">1 tote high</label>
-        </div>
-        <div class="col-md-1 col-sm-3">
-            <label><input type="radio" name="bin_height" id="bin_height" value="2">2 totes high</label>
-        </div>
-        <div class="col-md-1 col-sm-3">
-            <label><input type="radio" name="bin_height" id="bin_height" value="3">3 totes high</label>
-        </div>
-        <div class="col-md-1 col-sm-3">
-            <label><input type="radio" name="bin_height" id="bin_height" value="4">4 totes high</label>
-        </div>
-        <div class="col-md-1 col-sm-3">
-            <label><input type="radio" name="bin_height" id="bin_height" value="5">5 totes high</label>
-        </div>
-        <div class="col-md-1 col-sm-3">
-            <label><input type="radio" name="bin_height" id="bin_height" value="6">6 totes high</label>
-        </div>
-        <div class="col-md-1 col-sm-3">
-            <label><input type="checkbox">Noodle in the bin?</label>
-        </div>
+      <div class="col-md-2">
+        <h4>Recycling Containers Stackified:</h4>
+      </div>
+      <div class="col-md-2 col-sm-12">
+        <span class="input-group form-field">
+          <input id="bin_height" name="bin_height" type="number" class="form-control custom-spinner"/>
+        </span>
+      </div>
+      <div class="col-md-6 col-sm-11 btn-group" data-toggle="buttons">
+        <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="1">1 tote high</label>
+        <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="2">2 totes high</label>
+        <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="3">3 totes high</label>
+        <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="4">4 totes high</label>
+        <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="5">5 totes high</label>
+        <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="6">6 totes high</label>
+      </div>
+      <div class="col-md-2 col-sm-3 btn-group" data-toggle="buttons">
+          <label class="btn btn-default"><input type="checkbox" name="bin_noodle" id="bin_noodle" value="noodle">Noodle in the bin?</label>
+      </div>
     </div>
     
     <div class = "row section">
@@ -178,38 +163,32 @@
     </div>
     
     <div class = "row section">
-      <h4>Step capabilities</h4>
-      <div class = "col-md-3">
-        <label><input type="checkbox">Recycling containers from the step</label>
+      <div class = "col-md-2">
+        <h4>Step capabilities</h4>
       </div>
-      <div class = "col-md-3">
-        <label><input type="checkbox">Totes from the step</label>
+      <div class = "col-md-4" data-toggle="buttons">
+        <label class="btn btn-default">
+          <input type="checkbox" name="step_containers" id="step_containers" value="1">Recycling containers from the step
+        </label>
       </div>
-    </div>
-    
-    <div class = "row section">
-      <div class = "col-md-1">
+      <div class = "col-md-2">
         <h4>Penalties</h4>
       </div>
-      <div class="col-md-1">
+      <div class = "col-md-2">
         <input id="penalties" name="penalties" type="number" class="form-control"/>
-        <span class="error-placeholder"></span>
       </div>
     </div>
     
     <div class="row section">
-      <div class="col-md-3">
+      <div class="col-md-2">
         <h3>Match Result:</h3>
       </div>
-      <div class="col-md-3 btn-group" data-toggle="buttons">
+      <div class="col-md-6 btn-group" data-toggle="buttons">
         <label class="btn btn-default"><input type="radio" name="result" id="result" value="1">Win</label>
         <label class="btn btn-default"><input type="radio" name="result" id="result" value="0">Loss</label>
         <label class="btn btn-default"><input type="radio" name="result" id="result" value="0.5">Tie</label>
       </div>
-    </div>
-    
-    <div class="row form-group">
-      <div class="col-md-8">
+      <div class="col-md-4">
         <div class="form-field">
           <input type="submit" class="btn btn-success pull-right" value="Submit"/>
         </div>
