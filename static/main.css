@@ -12,3 +12,9 @@ div.content {
 	border-bottom: 1px solid #bbb;
 	padding-top: 5px;
 }
+/*
+.btn-group .btn:focus, 
+.btn-group .btn:hover
+{
+    outline: none;
+}*/

@@ -18,8 +18,9 @@ def callback():
 @post('/form/save')
 def callback():
     #print('text1 = %s' % request.forms.get('text1', 'nothing provided'))
-    for k in request.forms:
-        print('%s -> %s' % (k, request.forms[k]))
+    f = request.forms
+    for k in f:
+        print('%s -> %s' % (k, f.getall(k) if len(f.getall(k)) > 1 else f.get(k)))
     redirect('/form')
 
 @route('/static/<path:path>')

@@ -39,9 +39,11 @@ $(function() {
             return true;
         }
     });
+    /*
     $(window).bind('beforeunload', function () {
         return 'If you leave this page, all data not submitted will be lost';
     });
+    */
     $('input[type=number].custom-spinner').each(function(i, e) {
         var increment = function(n) {
             return function() {
@@ -49,7 +51,10 @@ $(function() {
                 $(e).val(Number($(e).val()) + n);
             }
         }
-        mkbutton().addClass('input-group-addon').text('+').insertAfter($(e)).click(increment(1));
-        mkbutton().addClass('input-group-addon').text('-').insertBefore($(e)).click(increment(-1));
+        var button_inc = mkbutton().addClass('input-group-addon').text('+').insertAfter($(e)).click(increment(1));
+        var button_dec = mkbutton().addClass('input-group-addon').text('-').insertBefore($(e)).click(increment(-1));
+        var width = Math.max(button_inc.width(), button_dec.width());
+        button_inc.width(width);
+        button_dec.width(width);
     });
 });
