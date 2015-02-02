@@ -17,7 +17,6 @@ def callback():
 
 @post('/form/save')
 def callback():
-    #print('text1 = %s' % request.forms.get('text1', 'nothing provided'))
     f = request.forms
     for k in f:
         print('%s -> %s' % (k, f.getall(k) if len(f.getall(k)) > 1 else f.get(k)))

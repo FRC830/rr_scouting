@@ -95,7 +95,7 @@
       <label for="totes_stacked" class="col-md-3 col-sm-4 control-label"><h4>Totes Stacked On Platform:</h4></label>
       <div class="col-md-2 col-sm-8">
         <span class="input-group form-field">
-          <input id="totes_stacked" name="totes_stacked" type="number" class="form-control custom-spinner"/>
+          <input id="totes_stacked" name="totes_stacked" type="number" class="form-control custom-spinner" value="0"/>
         </span>
         <span class="error-placeholder"></span>
       </div>
@@ -121,7 +121,7 @@
       </div>
       <div class="col-md-2 col-sm-12">
         <span class="input-group form-field">
-          <input id="bin_height" name="bin_height" type="number" class="form-control custom-spinner"/>
+          <input id="bins_stacked" name="bins_stacked" type="number" class="form-control custom-spinner" value="0"/>
         </span>
       </div>
       <div class="col-md-6 col-sm-11 btn-group" data-toggle="buttons">
@@ -133,7 +133,7 @@
         <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="6">6 totes high</label>
       </div>
       <div class="col-md-2 col-sm-3 btn-group" data-toggle="buttons">
-          <label class="btn btn-default"><input type="checkbox" name="bin_noodle" id="bin_noodle" value="noodle">Noodle in the bin?</label>
+          <label class="btn btn-default"><input type="checkbox" name="bin_noodle" id="bin_noodle" value="1">Noodle in the bin?</label>
       </div>
     </div>
     
@@ -155,13 +155,13 @@
       </div>
       <div class="col-md-7 col-sm-12 btn-group" data-toggle="buttons">
         <label class="btn btn-default">
-          <input type="checkbox" name="noodle_capabilities" id="noodle_capabilities" value="bottom">Pushing noodles on the ground
+          <input type="checkbox" name="noodle_capabilities" id="noodle_capabilities" value="push">Pushing noodles on the ground
         </label>
         <label class="btn btn-default">
-          <input type="checkbox" name="noodle_capabilities" id="noodle_capabilities" value="top">Pick up noodles from the ground
+          <input type="checkbox" name="noodle_capabilities" id="noodle_capabilities" value="pickup">Pick up noodles from the ground
         </label>
         <label class="btn btn-default">
-          <input type="checkbox" name="noodle_capabilities" id="noodle_capabilities" value="bulldozer">Get noodles from human
+          <input type="checkbox" name="noodle_capabilities" id="noodle_capabilities" value="human">Get noodles from human
         </label>
       </div>
       <div class = "col-md-1">
@@ -169,7 +169,7 @@
       </div>
       <div class = "col-md-3" data-toggle="buttons">
         <label class="btn btn-default">
-          <input type="checkbox" name="step_containers" id="step_containers" value="1">Recycling containers from the step
+          <input type="checkbox" name="step_containers" id="step_containers" value="1" class="form-control">Recycling containers from the step
         </label>
       </div>
     </div>
@@ -179,14 +179,14 @@
         <h4>Final Alliance Score:</h4>
       </div>
       <div class="col-md-4">
-        <input id="score" name="score" type="number" class="form-control"/>
+        <input id="score" name="score" type="number" class="form-control" value="0"/>
       </div>
       <div class = "col-md-1">
         <h4>Penalties</h4>
       </div>
       <div class = "col-md-2">
         <span class="input-group form-field">
-          <input id="penalties" name="penalties" type="number" class="form-control custom-spinner"/>
+          <input id="penalties" name="penalties" type="number" class="form-control custom-spinner" value="0"/>
         </span>
       </div>
     </div>
@@ -196,7 +196,7 @@
         <h4>Comments:</h4>
       </div>
       <div class="col-md-10 col-sm-10">
-        <textarea id="comments" name="comments" placeholder="Exceptional noodle thrower, good alliance choice, robot malfunction..." class="com-field"></textarea>
+        <textarea id="comments" name="comments" placeholder="Exceptional noodle thrower, good alliance choice, robot malfunction..." class="com-field form-control"></textarea>
       </div>
     </div>
     
