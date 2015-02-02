@@ -1,11 +1,5 @@
 % rebase('base.tpl', title='Scouting form')
 <div class="col-xs-12 Section-title">
-<!--Commented to allow form to fit without scrolling, uncomment if you want
-  <h2>
-    <img src="/static/logo.png" height="50px"/>
-    Recycle Rush Scouting Form
-  </h2>
--->
 <!--  <a class="pull-right flat-button fullscreen-toggle">
     Fullscreen
     <span class="glyphicon glyphicon-fullscreen"></span>
@@ -145,23 +139,6 @@
     
     <div class = "row section">
       <div class="col-md-4 col-sm-12">
-        <h4>Noodle Handling:</h4>
-      </div>
-      <div class="col-md-8 col-sm-12 btn-group" data-toggle="buttons">
-        <label class="btn btn-default">
-          <input type="checkbox" name="noodle_capabilities" id="noodle_capabilities" value="bottom">Pushing noodles on the ground
-        </label>
-        <label class="btn btn-default">
-          <input type="checkbox" name="noodle_capabilities" id="noodle_capabilities" value="top">Pick up noodles from the ground
-        </label>
-        <label class="btn btn-default">
-          <input type="checkbox" name="noodle_capabilities" id="noodle_capabilities" value="bulldozer">Get noodles from human
-        </label>
-      </div>
-    </div>
-    
-    <div class = "row section">
-      <div class="col-md-4 col-sm-12">
         <h4>Coopertition (that they contributed to)</h4>
       </div>
       <div class="col-md-8 col-sm-12 btn-group" data-toggle="buttons">
@@ -173,15 +150,38 @@
     </div>
     
     <div class = "row section">
-      <div class = "col-md-2">
-        <h4>Step capabilities</h4>
+      <div class="col-md-1 col-sm-12">
+        <h4>Noodle Capabilities:</h4>
       </div>
-      <div class = "col-md-4" data-toggle="buttons">
+      <div class="col-md-7 col-sm-12 btn-group" data-toggle="buttons">
+        <label class="btn btn-default">
+          <input type="checkbox" name="noodle_capabilities" id="noodle_capabilities" value="bottom">Pushing noodles on the ground
+        </label>
+        <label class="btn btn-default">
+          <input type="checkbox" name="noodle_capabilities" id="noodle_capabilities" value="top">Pick up noodles from the ground
+        </label>
+        <label class="btn btn-default">
+          <input type="checkbox" name="noodle_capabilities" id="noodle_capabilities" value="bulldozer">Get noodles from human
+        </label>
+      </div>
+      <div class = "col-md-1">
+        <h4>Step capabilities:</h4>
+      </div>
+      <div class = "col-md-3" data-toggle="buttons">
         <label class="btn btn-default">
           <input type="checkbox" name="step_containers" id="step_containers" value="1">Recycling containers from the step
         </label>
       </div>
-      <div class = "col-md-2">
+    </div>
+    
+    <div class="row section">
+      <div class="col-md-2">
+        <h4>Final Alliance Score:</h4>
+      </div>
+      <div class="col-md-4">
+        <input id="score" name="score" type="number" class="form-control"/>
+      </div>
+      <div class = "col-md-1">
         <h4>Penalties</h4>
       </div>
       <div class = "col-md-2">
@@ -191,16 +191,6 @@
       </div>
     </div>
     
-    <div class="row section">
-      <div class="col-md-2">
-        <h3>Match Result:</h3>
-      </div>
-      <div class="col-md-6 btn-group" data-toggle="buttons">
-        <label class="btn btn-default"><input type="radio" name="result" id="result" value="1">Win</label>
-        <label class="btn btn-default"><input type="radio" name="result" id="result" value="0">Loss</label>
-        <label class="btn btn-default"><input type="radio" name="result" id="result" value="0.5">Tie</label>
-      </div>
-    </div>
     <div class="row section">
       <div class="col-md-2 col-sm-2">
         <h4>Comments:</h4>
