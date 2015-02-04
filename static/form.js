@@ -21,10 +21,28 @@ $(function() {
                 minlength: 1,
                 required: true
             },
+			tote_height: {
+				required: true
+			},
+			bins_stacked: {
+				minlength: 1,
+				required: true
+			},
             bin_height: {
                 minlength: 1,
                 required: true
             },
+			coop: {
+				required: true
+			},
+			score: {
+				minlength: 1,
+				required: true
+			},
+			penalties: {
+				minlength: 1,
+				required: true
+			}
         },
         highlight: function(element) {
             $(element).closest('.form-field').addClass('has-error');
