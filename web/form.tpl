@@ -8,12 +8,12 @@
 <form action="/form/save" method="post" id="scouting-form" class="">
     <div class="row form-group">
       <div class="col-md-4">
-        <h2>
+        <h3>
           <img src="/static/logo.png" width="50px"/>
           Recycle Rush Scouting Form
-        </h2>
+        </h3>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-4">
         <div class="form-field">
             <label for="match_id" class="col-md-3 col-xs-4 control-label">Match #</label>
             <div class="col-md-8 col-xs-6">
@@ -21,7 +21,7 @@
             </div>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-4">
         <div class="form-field">
             <label for="team_id" class="col-md-3 col-xs-4 control-label">Team #</label>
             <div class="col-md-8 col-xs-6">
@@ -122,6 +122,9 @@
           <input id="bins_stacked" name="bins_stacked" type="number" class="form-control custom-spinner" value="0"/>
         </span>
       </div>
+      <div class="col-md-2">
+        <h4>Highest container scored:</h4>
+      </div>
       <div class="col-md-6 col-sm-11 btn-group" data-toggle="buttons">
         <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="1">1 tote high</label>
         <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="2">2 totes high</label>
@@ -130,9 +133,6 @@
         <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="5">5 totes high</label>
         <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="6">6 totes high</label>
       </div>
-      <div class="col-md-2 col-sm-3 btn-group" data-toggle="buttons">
-          <label class="btn btn-default"><input type="checkbox" name="bin_noodle" id="bin_noodle" value="1">Noodle in the bin?</label>
-      </div>
     </div>
     
     <div class = "row section">
@@ -140,9 +140,8 @@
         <h4>Coopertition (that they contributed to)</h4>
       </div>
       <div class="col-md-8 col-sm-12 btn-group" data-toggle="buttons">
-        <label class="btn btn-default"><input type="radio" name="coop" id="coop" value="set">Coopertition set</label>
-        <label class="btn btn-default"><input type="radio" name="coop" id="coop" value="stack_start">Start coopertition stack</label>
-        <label class="btn btn-default"><input type="radio" name="coop" id="coop" value="stack_finish">Finish coopertition stack</label>
+        <label class="btn btn-default"><input type="radio" name="coop" id="coop" value="start">Start</label>
+        <label class="btn btn-default"><input type="radio" name="coop" id="coop" value="add">Add</label>
         <label class="btn btn-default"><input type="radio" name="coop" id="coop" value="none">This fool didn't do nuthin'</label>
       </div>
     </div>
@@ -153,13 +152,16 @@
       </div>
       <div class="col-md-7 col-sm-12 btn-group" data-toggle="buttons">
         <label class="btn btn-default">
-          <input type="checkbox" name="noodle_capabilities" id="noodle_capabilities" value="push">Pushing noodles on the ground
+          <input type="checkbox" name="noodle_capabilities" id="noodle_capabilities" value="push">Push on ground
         </label>
         <label class="btn btn-default">
-          <input type="checkbox" name="noodle_capabilities" id="noodle_capabilities" value="pickup">Pick up noodles from the ground
+          <input type="checkbox" name="noodle_capabilities" id="noodle_capabilities" value="pickup">Pick up from ground
         </label>
         <label class="btn btn-default">
-          <input type="checkbox" name="noodle_capabilities" id="noodle_capabilities" value="human">Get noodles from human
+          <input type="checkbox" name="noodle_capabilities" id="noodle_capabilities" value="human">Get from human
+        </label>
+        <label class="btn btn-default">
+          <input type="checkbox" name="noodle_capabilities" id="noodle_capabilities" value="bin">Put in the bins
         </label>
       </div>
       <div class = "col-md-1">
