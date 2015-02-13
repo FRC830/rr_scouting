@@ -88,7 +88,7 @@
         </label>
       </div>
     </div>
-    
+
     <div class="row section">
       <label for="totes_stacked" class="col-md-3 col-sm-4 control-label"><h4>Totes Stacked On Platform:</h4></label>
       <div class="col-md-2 col-sm-8">
@@ -112,20 +112,23 @@
         <label class="btn btn-default"><input type="radio" name="tote_height" id="tote_height" value="6">6 totes high</label>
       </div>
     </div>
-    
-    <div class="row section">
-      <div class="col-md-2">
+
+    <div class="row">
+      <div class="col-md-3">
         <h4>Recycling Containers Scored:</h4>
       </div>
-      <div class="col-md-2 col-sm-12">
+      <div class="col-md-3 col-sm-12">
         <span class="input-group form-field">
           <input id="bins_stacked" name="bins_stacked" type="number" class="form-control custom-spinner" value="0"/>
         </span>
       </div>
-      <div class="col-md-2">
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-12">
         <h4>Highest container scored:</h4>
       </div>
-      <div class="col-md-6 col-sm-11 btn-group" data-toggle="buttons">
+      <div class="col-md-9 col-sm-12 btn-group" data-toggle="buttons">
+        <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="0">None</label>
         <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="1">1 tote high</label>
         <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="2">2 totes high</label>
         <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="3">3 totes high</label>
@@ -134,7 +137,7 @@
         <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="6">6 totes high</label>
       </div>
     </div>
-    
+
     <div class = "row section">
       <div class="col-md-4 col-sm-12">
         <h4>Coopertition (that they contributed to)</h4>
@@ -145,7 +148,7 @@
         <label class="btn btn-default"><input type="radio" name="coop" id="coop" value="none">This fool didn't do nuthin'</label>
       </div>
     </div>
-    
+
     <div class = "row section">
       <div class="col-md-1 col-sm-12">
         <h4>Noodle Capabilities:</h4>
@@ -173,7 +176,7 @@
         </label>
       </div>
     </div>
-    
+
     <div class="row section">
       <div class="col-md-2">
         <h4>Final Alliance Score:</h4>
@@ -190,7 +193,7 @@
         </span>
       </div>
     </div>
-    
+
     <div class="row section">
       <div class="col-md-2 col-sm-2">
         <h4>Comments:</h4>
@@ -199,7 +202,7 @@
         <textarea id="comments" name="comments" placeholder="Exceptional noodle thrower, good alliance choice, robot malfunction..." class="com-field form-control"></textarea>
       </div>
     </div>
-    
+
     <div class="row">
       <div class="col-md-12 col-sm-12">
         <div class="form-field">
@@ -207,7 +210,7 @@
         </div>
       </div>
     </div>
-    
+
 </form>
 <script src="/static/jquery.validate.min.js"></script>
 <script src="/static/form.js"></script>
