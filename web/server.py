@@ -23,7 +23,7 @@ def callback():
     for k in f:
         #print('%s -> %s' % (k, f.getall(k) if len(f.getall(k)) > 1 else f.get(k)))
         data[k] = f.getall(k) if len(f.getall(k)) > 1 else f.get(k)
-    print(csv.order_data(data))
+    csv.export(data)
     redirect('/form')
 
 @route('/static/<path:path>')

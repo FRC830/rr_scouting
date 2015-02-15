@@ -77,16 +77,16 @@
       </div>
       <div class="col-md-9 col-sm-12 btn-group" data-toggle="buttons">
         <label class="btn btn-default">
-          <input type="checkbox" name="stack_capabilities" id="stack_capabilities" value="bottom">Add to bottom (bottom stacker)
+          <input type="checkbox" name="bottom_stacker" id="bottom_stacker" value="1">Add to bottom (bottom stacker)
         </label>
         <label class="btn btn-default">
-          <input type="checkbox" name="stack_capabilities" id="stack_capabilities" value="top">Add to top (top stacker)
+          <input type="checkbox" name="top_stacker" id="top_stacker" value="1">Add to top (top stacker)
         </label>
         <label class="btn btn-default">
-          <input type="checkbox" name="stack_capabilities" id="stack_capabilities" value="bulldozer">Bulldozer/pusher
+          <input type="checkbox" name="bulldozer" id="bulldozer" value="1">Bulldozer/pusher
         </label>
         <label class="btn btn-default">
-          <input type="checkbox" name="stack_capabilities" id="stack_capabilities" value="other">Other
+          <input type="checkbox" name="other_capabilities" id="other_capabilities" value="1">Other
         </label>
       </div>
     </div>
