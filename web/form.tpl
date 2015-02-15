@@ -157,22 +157,22 @@
       </div>
       <div class="col-md-9 btn-group" data-toggle="buttons">
         <label class="btn btn-default">
-          <input type="checkbox" name="noodle_capabilities" id="noodle_capabilities" value="push">Push on ground
+          <input type="checkbox" name="push_noodle" id="push_noodle" value="1">Push on ground
         </label>
         <label class="btn btn-default">
-          <input type="checkbox" name="noodle_capabilities" id="noodle_capabilities" value="pickup">Pick up from ground
+          <input type="checkbox" name="noodle_pickup" id="noodle_pickup" value="1">Pick up from ground
         </label>
         <label class="btn btn-default">
-          <input type="checkbox" name="noodle_capabilities" id="noodle_capabilities" value="human">Get from human
+          <input type="checkbox" name="noodle_from_human" id="noodle_from_human" value="1">Get from human
         </label>
         <label class="btn btn-default">
-          <input type="checkbox" name="noodle_capabilities" id="noodle_capabilities" value="bin">Put in the bins
+          <input type="checkbox" name="noodle_in_bins" id="noodle_in_bins" value="1">Put in the bins
         </label>
       </div>
     </div>
     <div class="row form-group form-field">
       <div class="col-md-3">
-        <h4>Gather Recycling Containers from step?</h4>
+        <h4>Get Containers From Step?</h4>
       </div>
       <div class="col-md-9 btn-group" data-toggle="buttons">
         <label class="btn btn-default">
