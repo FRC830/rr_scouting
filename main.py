@@ -20,6 +20,8 @@ def server_running():
     return False
 
 def open_page():
+    if '--no-open' in sys.argv:
+        return
     webbrowser.open('http://localhost:8000')
 
 class evil_callback_thread(threading.Thread):
