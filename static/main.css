@@ -8,16 +8,6 @@ div.content {
     margin: 2em;
     padding: 1em;
 }
-.section{
-	border-bottom: 1px solid #ccc;
-	padding-top: 5px;
-}
-/*
-.btn-group .btn:focus, 
-.btn-group .btn:hover
-{
-    outline: none;
-}*/
 
 .has-error input[type=text],
 .has-error input[type=number]
@@ -25,7 +15,7 @@ div.content {
     background-color: #fdd;
 }
 
-.com-field{
-	width:22.6524758425em;
-	height: 14em;
+.com-field {
+    width: 22em;
+    height: 14em;
 }

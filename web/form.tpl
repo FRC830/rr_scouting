@@ -7,36 +7,38 @@
 </div>
 <form action="/form/save" method="post" id="scouting-form" class="">
     <div class="row form-group">
-      <div class="col-md-4">
+      <div class="col-sm-12">
         <h3>
-          <img src="/static/logo.png" width="50px"/>
+          <img src="/static/logo.png" width="50px" class="pull-right"/>
           Recycle Rush Scouting Form
         </h3>
       </div>
-      <div class="col-md-4">
+    </div>
+    <div class="row form-group">
+      <div class="col-md-4 col-xs-12">
         <div class="form-field">
-            <label for="match_id" class="col-md-3 col-xs-4 control-label">Match #</label>
-            <div class="col-md-8 col-xs-6">
-                <input id="match_id" name="match_id" type="number" class="form-control"/>
-            </div>
+          <label for="match_id" class="col-xs-4 control-label">Match #</label>
+          <div class="col-xs-8">
+            <input id="match_id" name="match_id" type="number" class="form-control"/>
+          </div>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 col-xs-12">
         <div class="form-field">
-            <label for="team_id" class="col-md-3 col-xs-4 control-label">Team #</label>
-            <div class="col-md-8 col-xs-6">
-                <input id="team_id" name="team_id" type="number" class="form-control"/>
-            </div>
+          <label for="team_id" class="col-xs-4 control-label">Team #</label>
+          <div class="col-xs-8">
+            <input id="team_id" name="team_id" type="number" class="form-control"/>
+          </div>
         </div>
       </div>
     </div>
 
     <h3>Autonomous</h3>
-    <div class="row form-field section">
-      <div class="col-md-2">
-          <h4>Auton Starting Position</h4>
+    <div class="row form-group form-field">
+      <div class="col-md-3">
+        <h4>Auton Starting Position</h4>
       </div>
-      <div class="col-md-8 btn-group" data-toggle="buttons">
+      <div class="col-md-9 btn-group" data-toggle="buttons">
         <label class="btn btn-default">
           <input type="radio" name="auton_start" id="auton_start" value="zone">Staging zone
         </label>
@@ -44,15 +46,15 @@
           <input type="radio" name="auton_start" id="auton_start" value="middle">Between auto zone and landfill
         </label>
         <label class="btn btn-default">
-          <input type="radio" name="auton_start" id="auton_start" value="other">other
+          <input type="radio" name="auton_start" id="auton_start" value="other">Other
         </label>
       </div>
     </div>
-    <div class="row form-field section">
-        <div class="col-md-3">
-            <h4>Auton tasks completed:</h4>
+    <div class="row form-group form-field">
+        <div class="col-lg-3">
+          <h4>Auton tasks completed:</h4>
         </div>
-        <div class="col-md-9 btn-group" data-toggle="buttons">
+        <div class="col-lg-9 btn-group" data-toggle="buttons">
           <label class="btn btn-default">
             <input type="checkbox" name="auton_tasks" id="auton_tasks" value="move">Robot moves into auto zone
           </label>
@@ -69,11 +71,11 @@
     </div>
 
     <h3>Teleoperated</h3>
-    <div class = "row section">
-      <div class="col-md-2 col-sm-12">
+    <div class="row form-group form-field">
+      <div class="col-md-3 col-sm-12">
         <h4>Stacking capabilities:</h4>
       </div>
-      <div class="col-md-10 col-sm-12 btn-group" data-toggle="buttons">
+      <div class="col-md-9 col-sm-12 btn-group" data-toggle="buttons">
         <label class="btn btn-default">
           <input type="checkbox" name="stack_capabilities" id="stack_capabilities" value="bottom">Add to bottom (bottom stacker)
         </label>
@@ -89,71 +91,71 @@
       </div>
     </div>
 
-    <div class="row section">
+    <div class="row form-group form-field">
       <label for="totes_stacked" class="col-md-3 col-sm-4 control-label"><h4>Totes Stacked On Platform:</h4></label>
-      <div class="col-md-2 col-sm-8">
+      <div class="col-md-3 col-sm-8">
         <span class="input-group form-field">
           <input id="totes_stacked" name="totes_stacked" type="number" class="form-control custom-spinner" value="0"/>
         </span>
         <span class="error-placeholder"></span>
       </div>
     </div>
-    <div class="row section">
-      <div class="col-md-2 col-sm-12">
+    <div class="row form-group form-field">
+      <div class="col-md-3 col-sm-12">
         <h4>Highest Tote Stack:</h4>
       </div>
-      <div class="col-md-10 col-sm-12 btn-group" data-toggle="buttons">
-        <label class="btn btn-default"><input type="radio" name="tote_height" id="tote_height" value="1">0 totes high</label>
-        <label class="btn btn-default"><input type="radio" name="tote_height" id="tote_height" value="1">1 tote high</label>
-        <label class="btn btn-default"><input type="radio" name="tote_height" id="tote_height" value="2">2 totes high</label>
-        <label class="btn btn-default"><input type="radio" name="tote_height" id="tote_height" value="3">3 totes high</label>
-        <label class="btn btn-default"><input type="radio" name="tote_height" id="tote_height" value="4">4 totes high</label>
-        <label class="btn btn-default"><input type="radio" name="tote_height" id="tote_height" value="5">5 totes high</label>
-        <label class="btn btn-default"><input type="radio" name="tote_height" id="tote_height" value="6">6 totes high</label>
+      <div class="col-md-9 col-sm-12 btn-group" data-toggle="buttons">
+        <label class="btn btn-default"><input type="radio" name="tote_height" id="tote_height" value="1">0 totes</label>
+        <label class="btn btn-default"><input type="radio" name="tote_height" id="tote_height" value="1">1 tote</label>
+        <label class="btn btn-default"><input type="radio" name="tote_height" id="tote_height" value="2">2 totes</label>
+        <label class="btn btn-default"><input type="radio" name="tote_height" id="tote_height" value="3">3 totes</label>
+        <label class="btn btn-default"><input type="radio" name="tote_height" id="tote_height" value="4">4 totes</label>
+        <label class="btn btn-default"><input type="radio" name="tote_height" id="tote_height" value="5">5 totes</label>
+        <label class="btn btn-default"><input type="radio" name="tote_height" id="tote_height" value="6">6 totes</label>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-md-3">
+    <div class="row form-group form-field">
+      <div class="col-md-3 col-sm-4">
         <h4>Recycling Containers Scored:</h4>
       </div>
-      <div class="col-md-3 col-sm-12">
+      <div class="col-md-3 col-sm-8">
         <span class="input-group form-field">
           <input id="bins_stacked" name="bins_stacked" type="number" class="form-control custom-spinner" value="0"/>
         </span>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-3 col-sm-12">
+    <div class="row form-group form-field">
+      <div class="col-md-3">
         <h4>Highest container scored:</h4>
       </div>
-      <div class="col-md-9 col-sm-12 btn-group" data-toggle="buttons">
+      <div class="col-md-9 btn-group" data-toggle="buttons">
         <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="0">None</label>
-        <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="1">1 tote high</label>
-        <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="2">2 totes high</label>
-        <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="3">3 totes high</label>
-        <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="4">4 totes high</label>
-        <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="5">5 totes high</label>
-        <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="6">6 totes high</label>
+        <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="1">1 tote</label>
+        <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="2">2 totes</label>
+        <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="3">3 totes</label>
+        <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="4">4 totes</label>
+        <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="5">5 totes</label>
+        <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="6">6 totes</label>
       </div>
     </div>
 
-    <div class = "row section">
-      <div class="col-md-4 col-sm-12">
-        <h4>Coopertition (that they contributed to)</h4>
+    <div class="row form-group form-field">
+      <div class="col-md-3">
+        <h4>Coopertition</h4>
       </div>
-      <div class="col-md-8 col-sm-12 btn-group" data-toggle="buttons">
+      <div class="col-md-9 btn-group" data-toggle="buttons">
         <label class="btn btn-default"><input type="radio" name="coop" id="coop" value="start">Start</label>
         <label class="btn btn-default"><input type="radio" name="coop" id="coop" value="add">Add</label>
         <label class="btn btn-default"><input type="radio" name="coop" id="coop" value="none">This fool didn't do nuthin'</label>
       </div>
     </div>
 
-    <div class = "row section">
-      <div class="col-md-1 col-sm-12">
+    <div class="row form-group form-field">
+      <div class="col-md-3">
         <h4>Noodle Capabilities:</h4>
       </div>
-      <div class="col-md-7 col-sm-12 btn-group" data-toggle="buttons">
+      <div class="col-md-9 btn-group" data-toggle="buttons">
         <label class="btn btn-default">
           <input type="checkbox" name="noodle_capabilities" id="noodle_capabilities" value="push">Push on ground
         </label>
@@ -167,17 +169,19 @@
           <input type="checkbox" name="noodle_capabilities" id="noodle_capabilities" value="bin">Put in the bins
         </label>
       </div>
-      <div class = "col-md-1">
+    </div>
+    <div class="row form-group form-field">
+      <div class="col-md-3">
         <h4>Step capabilities:</h4>
       </div>
-      <div class = "col-md-3" data-toggle="buttons">
+      <div class="col-md-9" data-toggle="buttons">
         <label class="btn btn-default">
           <input type="checkbox" name="step_containers" id="step_containers" value="1" class="form-control">Recycling containers from the step
         </label>
       </div>
     </div>
 
-    <div class="row section">
+    <div class="row">
       <div class="col-md-2">
         <h4>Final Alliance Score:</h4>
       </div>
@@ -194,7 +198,7 @@
       </div>
     </div>
 
-    <div class="row section">
+    <div class="row">
       <div class="col-md-2 col-sm-2">
         <h4>Comments:</h4>
       </div>
