@@ -13,7 +13,7 @@ $(function() {
                 minlength: 1,
                 maxlength: 15,
                 required: true
-            },
+            }/*,
             auton_start: {
                 required: true
             },
@@ -42,7 +42,7 @@ $(function() {
 			penalties: {
 				minlength: 1,
 				required: true
-			}
+			}*/
         },
         highlight: function(element) {
             $(element).closest('.form-field').addClass('has-error');

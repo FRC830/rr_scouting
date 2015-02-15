@@ -56,16 +56,16 @@
         </div>
         <div class="col-lg-9 btn-group" data-toggle="buttons">
           <label class="btn btn-default">
-            <input type="checkbox" name="auton_tasks" id="auton_tasks" value="move">Robot moves into auto zone
+            <input type="checkbox" name="auton_robot_move" id="auton_robot_move" value="1">Robot moves into auto zone
           </label>
           <label class="btn btn-default">
-            <input type="checkbox" name="auton_tasks" id="auton_tasks" value="tote">Move tote into auto zone
+            <input type="checkbox" name="auton_tote_move" id="auton_tote_move" value="1">Move tote into auto zone
           </label>
           <label class="btn btn-default">
-            <input type="checkbox" name="auton_tasks" id="auton_tasks" value="container">Move Recycling container into auto zone
+            <input type="checkbox" name="auton_container_move" id="auton_container_move" value="1">Move Recycling container into auto zone
           </label>
           <label class="btn btn-default">
-            <input type="checkbox" name="auton_tasks" id="auton_tasks" value="stack">3 tote stack!
+            <input type="checkbox" name="auton_tote_stack" id="auton_tote_stack" value="1">3 tote stack!
           </label>
         </div>
     </div>
@@ -172,11 +172,14 @@
     </div>
     <div class="row form-group form-field">
       <div class="col-md-3">
-        <h4>Step capabilities:</h4>
+        <h4>Gather Recycling Containers from step?</h4>
       </div>
-      <div class="col-md-9" data-toggle="buttons">
+      <div class="col-md-9 btn-group" data-toggle="buttons">
         <label class="btn btn-default">
-          <input type="checkbox" name="step_containers" id="step_containers" value="1" class="form-control">Recycling containers from the step
+          <input type="radio" name="step_containers" id="step_containers" value="1" class="form-control">Yes
+        </label>
+        <label class="btn btn-default">
+          <input type="radio" name="step_containers" id="step_containers" value="0" class="form-control">No
         </label>
       </div>
     </div>
