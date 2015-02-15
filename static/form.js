@@ -107,4 +107,7 @@ $(function() {
         button_inc.width(width);
         button_dec.width(width);
     });
+    $('body').on('change', '.has-error input[type=radio]', function(evt) {
+        $(this).parents('.has-error').removeClass('has-error');
+    });
 });

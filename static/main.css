@@ -15,6 +15,11 @@ div.content {
     background-color: #fdd;
 }
 
+.has-error .btn
+{
+    border-color: rgb(169, 68, 66);
+}
+
 .com-field {
     width: 22em;
     height: 14em;
