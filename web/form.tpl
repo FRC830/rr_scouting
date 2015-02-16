@@ -9,7 +9,7 @@
     <div class="row form-group">
       <div class="col-sm-12">
         <h3>
-          <img src="/static/logo.png" width="50px" class="pull-right"/>
+          <img src="/static/logo.png" width="100px" class="pull-right"/>
           Recycle Rush Scouting Form
         </h3>
       </div>
