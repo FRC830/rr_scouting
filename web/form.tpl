@@ -9,7 +9,7 @@
     <div class="row form-group">
       <div class="col-sm-12">
         <h3>
-          <img src="/static/logo.png" width="100px" class="pull-right"/>
+          <img id="logo" src="/static/logo.png" width="100px" class="pull-right"/>
           Recycle Rush Scouting Form
         </h3>
       </div>
@@ -213,7 +213,7 @@
     <div class="row">
       <div class="col-md-12 col-sm-12">
         <div class="form-field">
-          <input type="submit" class="btn btn-success pull-right" value="Submit"/>
+          <input type="submit" class="btn btn-primary pull-right" value="Submit"/>
         </div>
       </div>
     </div>
