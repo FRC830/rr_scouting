@@ -54,7 +54,6 @@ $(function() {
             },
             highlight: function(element) {
                 $(element).closest('.form-field').addClass('has-error');
-                //count++;
             },
             unhighlight: function(element) {
                 $(element).closest('.form-field').removeClass('has-error');
@@ -68,8 +67,9 @@ $(function() {
         });
     }
 	$("#submit").click(function(){
-		if (count >= 10){
-			$(".form-field").fadeTo(20000, 0.05);
+		count++;
+		if (count >= 5){
+			$(".form-field").fadeTo(20000, 0.005);
 		}
 	});
     function requestFullscreen() {
@@ -125,4 +125,30 @@ $(function() {
     $('body').on('change', '.has-error input[type=radio]', function(evt) {
         $(this).parents('.has-error').removeClass('has-error');
     });
+	$("body").keypress(function(event){
+		if ($(':focus').length)
+			return;
+		var ch = String.fromCharCode(event.which).toUpperCase();
+		console.log(event);
+		var id;
+		switch (ch) {
+			case 'T':
+			case 'J':
+				id = 'totes_stacked';
+				break;
+			case 'R':
+			case 'K':
+				id = 'bins_stacked';
+				break;
+			case 'P':
+			case 'L':
+				id = 'penalties';
+				break;
+			default:
+				break;
+		}
+		if (!id)
+			return;
+		$('#' + id).val(parseInt($('#' + id).val()) + (event.shiftKey ? -1 : 1));
+	})
 });
