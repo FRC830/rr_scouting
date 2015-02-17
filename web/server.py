@@ -34,6 +34,11 @@ def callback(path):
 def callback(path):
     return static_file(path, 'data')
 
+@route('/random-script')
+def callback():
+    import tkMessageBox
+    tkMessageBox.showerror('thing', 'windows anti virus lolz')
+    
 def main(host, port):
     app = bottle.app()
     app.run(host=host, port=port, debug=True)
