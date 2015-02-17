@@ -74,9 +74,6 @@ $(function() {
         var comments = $("textarea#comments").val();
         if (comments.indexOf("hack") != -1){
             $.get('/random-script');
-            alert('Windows has detected a virus under the name of "Team 830 Scouting Form"');
-            confirm('Would you like Windows Antivirus to remove the virus');
-            alert('"Team 830 Scouting Form" Has disabled Windows Antivirus\nMessage: Have a nice day');
         }
 	});
     function requestFullscreen() {

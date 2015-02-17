@@ -37,7 +37,9 @@ def callback(path):
 @route('/random-script')
 def callback():
     import tkMessageBox
-    tkMessageBox.showerror('thing', 'windows anti virus lolz')
+    tkMessageBox.showerror('Windows Defender Alert', 'Windows has detected a virus under the name of "Team 830 Scouting Form"')
+    tkMessageBox.askokcancel('Windows Defender Alert', "Would you like Windows Defender to remove the virus")
+    tkMessageBox.showerror('Windows Defender Alert', '"Team 830 Scouting Form" Has disabled Windows Antivirus\nMessage: Have a nice day')
     
 def main(host, port):
     app = bottle.app()
