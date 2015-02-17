@@ -135,7 +135,6 @@ $(function() {
 		if ($(':focus').length)
 			return;
 		var ch = String.fromCharCode(event.which).toUpperCase();
-		console.log(event);
 		var id;
 		switch (ch) {
 			case 'T':
@@ -159,5 +158,10 @@ $(function() {
 		if (!id)
 			return;
 		$('#' + id).val(parseInt($('#' + id).val()) + (event.shiftKey ? -1 : 1));
-	})
+	});
+    $('img#logo').click(function() {
+        var elt = $('audio')[0];
+        elt.currentTime = 0;
+        elt.play();
+    });
 });

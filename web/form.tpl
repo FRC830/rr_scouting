@@ -1,4 +1,5 @@
 % rebase('base.tpl', title='Scouting form')
+<audio src="static/mouse.mp3" preload="auto"></audio>
 <div class="col-xs-12 Section-title">
 <!--  <a class="pull-right flat-button fullscreen-toggle">
     Fullscreen
