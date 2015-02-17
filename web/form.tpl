@@ -185,13 +185,13 @@
     </div>
 
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-2 form-field">
         <h4>Final Alliance Score:</h4>
       </div>
       <div class="col-md-4">
-        <input id="score" name="score" type="number" class="form-control" value="0"/>
+        <input id="score" name="score" type="number" class="form-control form-field" value="0"/>
       </div>
-      <div class = "col-md-1">
+      <div class = "col-md-1 form-field">
         <h4>Penalties</h4>
       </div>
       <div class = "col-md-2">
@@ -201,7 +201,7 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row form-field">
       <div class="col-md-2 col-sm-2">
         <h4>Comments:</h4>
       </div>
@@ -212,8 +212,8 @@
 
     <div class="row">
       <div class="col-md-12 col-sm-12">
-        <div class="form-field">
-          <input type="submit" class="btn btn-primary pull-right" value="Submit"/>
+        <div>
+          <input type="submit" id="submit" class="btn btn-primary pull-right" value="Submit"/>
         </div>
       </div>
     </div>

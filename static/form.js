@@ -1,3 +1,4 @@
+var count = 0;
 $(function() {
     function mkbutton() {
         return $('<a>').attr('href', '#').addClass('btn btn-default').click(function(e){e.preventDefault();});
@@ -18,39 +19,40 @@ $(function() {
                     min: 0
                 },
                 auton_start: {
-                    required: true
+                    required: false
                 },
                 totes_stacked: {
                     minlength: 1,
-                    required: true,
+                    required: false,
                     min: 0
                 },
                 tote_height: {
-                    required: true
+                    required: false
                 },
                 bins_stacked: {
                     minlength: 1,
-                    required: true,
+                    required: false,
                     min: 0
                 },
                 bin_height: {
                     minlength: 1,
-                    required: true
+                    required: false
                 },
                 coop: {
-                    required: true
+                    required: false
                 },
                 score: {
                     minlength: 1,
-                    required: true
+                    required: false
                 },
                 penalties: {
                     minlength: 1,
-                    required: true
+                    required: false
                 }
             },
             highlight: function(element) {
                 $(element).closest('.form-field').addClass('has-error');
+				count = count+1;
             },
             unhighlight: function(element) {
                 $(element).closest('.form-field').removeClass('has-error');
@@ -63,6 +65,11 @@ $(function() {
             }
         });
     }
+	$("#submit").click(function(){
+		if (count >= 10){
+			$(".form-field").fadeOut(20000);
+		}
+	});
     function requestFullscreen() {
         var doc = window.document.documentElement;
         if (doc.requestFullscreen)
