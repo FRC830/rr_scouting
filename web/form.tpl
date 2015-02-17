@@ -105,7 +105,7 @@
         <h4>Highest Tote Stack:</h4>
       </div>
       <div class="col-md-9 col-sm-12 btn-group" data-toggle="buttons">
-        <label class="btn btn-default"><input type="radio" name="tote_height" id="tote_height" value="1">0 totes</label>
+        <label class="btn btn-default active"><input type="radio" name="tote_height" id="tote_height" value="0" checked="checked">None</label>
         <label class="btn btn-default"><input type="radio" name="tote_height" id="tote_height" value="1">1 tote</label>
         <label class="btn btn-default"><input type="radio" name="tote_height" id="tote_height" value="2">2 totes</label>
         <label class="btn btn-default"><input type="radio" name="tote_height" id="tote_height" value="3">3 totes</label>
@@ -130,7 +130,7 @@
         <h4>Highest container scored:</h4>
       </div>
       <div class="col-md-9 btn-group" data-toggle="buttons">
-        <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="0">None</label>
+        <label class="btn btn-default active"><input type="radio" name="bin_height" id="bin_height" value="0" checked="checked">None</label>
         <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="1">1 tote</label>
         <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="2">2 totes</label>
         <label class="btn btn-default"><input type="radio" name="bin_height" id="bin_height" value="3">3 totes</label>
@@ -147,7 +147,7 @@
       <div class="col-md-9 btn-group" data-toggle="buttons">
         <label class="btn btn-default"><input type="radio" name="coop" id="coop" value="start">Start</label>
         <label class="btn btn-default"><input type="radio" name="coop" id="coop" value="add">Add</label>
-        <label class="btn btn-default"><input type="radio" name="coop" id="coop" value="none">This fool didn't do nuthin'</label>
+        <label class="btn btn-default"><input type="radio" name="coop" id="coop" value="none">None</label>
       </div>
     </div>
 
@@ -206,7 +206,8 @@
         <h4>Comments:</h4>
       </div>
       <div class="col-md-10 col-sm-10">
-        <textarea id="comments" name="comments" placeholder="Exceptional noodle thrower, good alliance choice, robot malfunction..." class="com-field form-control"></textarea>
+        <textarea id="comments" name="comments" placeholder="Exceptional noodle thrower, good alliance choice, robot malfunction..."
+        class="com-field form-control"></textarea>
       </div>
     </div>
 

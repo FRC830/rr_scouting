@@ -19,40 +19,40 @@ $(function() {
                     min: 0
                 },
                 auton_start: {
-                    required: false
+                    required: true,
                 },
                 totes_stacked: {
                     minlength: 1,
-                    required: false,
+                    required: true,
                     min: 0
                 },
                 tote_height: {
-                    required: false
+                    required: true,
                 },
                 bins_stacked: {
                     minlength: 1,
-                    required: false,
+                    required: true,
                     min: 0
                 },
                 bin_height: {
                     minlength: 1,
-                    required: false
+                    required: true,
                 },
                 coop: {
-                    required: false
+                    required: true,
                 },
                 score: {
                     minlength: 1,
-                    required: false
+                    required: true,
                 },
                 penalties: {
                     minlength: 1,
-                    required: false
+                    required: true,
                 }
             },
             highlight: function(element) {
                 $(element).closest('.form-field').addClass('has-error');
-				count = count+1;
+                count++;
             },
             unhighlight: function(element) {
                 $(element).closest('.form-field').removeClass('has-error');
@@ -67,7 +67,7 @@ $(function() {
     }
 	$("#submit").click(function(){
 		if (count >= 10){
-			$(".form-field").fadeOut(20000);
+			$(".form-field").fadeTo(20000, 0.05);
 		}
 	});
     function requestFullscreen() {
