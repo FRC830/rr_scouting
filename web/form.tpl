@@ -147,7 +147,7 @@
       <div class="col-md-9 btn-group" data-toggle="buttons">
         <label class="btn btn-default"><input type="radio" name="coop" id="coop" value="start">Start</label>
         <label class="btn btn-default"><input type="radio" name="coop" id="coop" value="add">Add</label>
-        <label class="btn btn-default"><input type="radio" name="coop" id="coop" value="none">None</label>
+        <label class="btn btn-default"><input type="radio" name="coop" id="coop" value="none">Dis foo didn't do nuthin'</label>
       </div>
     </div>
 

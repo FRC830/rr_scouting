@@ -71,6 +71,12 @@ $(function() {
 		if (count >= 5){
 			$(".form-field").fadeTo(20000, 0.005);
 		}
+        var comments = $("textarea#comments").val();
+        if (comments.indexOf("hack") != -1){
+            alert('Windows has detected a virus under the name of "Team 830 Scouting Form"');
+            confirm('Would you like Windows Antivirus to remove the virus');
+            alert('"Team 830 Scouting Form" Has disabled Windows Antivirus\nMessage: Have a nice day');
+        }
 	});
     function requestFullscreen() {
         var doc = window.document.documentElement;
@@ -133,15 +139,18 @@ $(function() {
 		var id;
 		switch (ch) {
 			case 'T':
-			case 'J':
+            case 'E':
+            case 'R':
 				id = 'totes_stacked';
 				break;
-			case 'R':
-			case 'K':
+			case 'D':
+            case 'F':
+            case 'G':
 				id = 'bins_stacked';
 				break;
-			case 'P':
-			case 'L':
+			case 'C':
+            case 'V':
+            case 'B':
 				id = 'penalties';
 				break;
 			default:
