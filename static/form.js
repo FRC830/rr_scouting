@@ -8,42 +8,46 @@ $(function() {
                 match_id: {
                     minlength: 1,
                     maxlength: 15,
-                    required: true
+                    required: true,
+                    min: 0
                 },
                 team_id: {
                     minlength: 1,
                     maxlength: 15,
-                    required: true
+                    required: true,
+                    min: 0
                 },
                 auton_start: {
                     required: true
                 },
                 totes_stacked: {
                     minlength: 1,
+                    required: true,
+                    min: 0
+                },
+                tote_height: {
                     required: true
                 },
-    			tote_height: {
-    				required: true
-    			},
-    			bins_stacked: {
-    				minlength: 1,
-    				required: true
-    			},
+                bins_stacked: {
+                    minlength: 1,
+                    required: true,
+                    min: 0
+                },
                 bin_height: {
                     minlength: 1,
                     required: true
                 },
-    			coop: {
-    				required: true
-    			},
-    			score: {
-    				minlength: 1,
-    				required: true
-    			},
-    			penalties: {
-    				minlength: 1,
-    				required: true
-    			}
+                coop: {
+                    required: true
+                },
+                score: {
+                    minlength: 1,
+                    required: true
+                },
+                penalties: {
+                    minlength: 1,
+                    required: true
+                }
             },
             highlight: function(element) {
                 $(element).closest('.form-field').addClass('has-error');
