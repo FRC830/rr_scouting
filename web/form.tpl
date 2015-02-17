@@ -184,35 +184,39 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-md-2 form-field">
-        <h4>Final Alliance Score:</h4>
+    <div class="row form-group">
+      <div class="form-field">
+        <div class="col-md-3">
+          <h4>Final Alliance Score:</h4>
+        </div>
+        <div class="col-md-3">
+          <input id="score" name="score" type="number" class="form-control" value="0"/>
+        </div>
       </div>
-      <div class="col-md-4">
-        <input id="score" name="score" type="number" class="form-control form-field" value="0"/>
-      </div>
-      <div class = "col-md-1 form-field">
-        <h4>Penalties</h4>
-      </div>
-      <div class = "col-md-2">
-        <span class="input-group form-field">
-          <input id="penalties" name="penalties" type="number" class="form-control custom-spinner" value="0"/>
-        </span>
+      <div class="form-field">
+        <div class="col-md-2 form-field">
+          <h4 class="pull-right">Penalties</h4>
+        </div>
+        <div class="col-md-4">
+          <span class="input-group">
+            <input id="penalties" name="penalties" type="number" class="form-control custom-spinner" value="0"/>
+          </span>
+        </div>
       </div>
     </div>
 
-    <div class="row form-field">
-      <div class="col-md-2 col-sm-2">
+    <div class="row form-field form-group">
+      <div class="col-md-3 col-sm-2">
         <h4>Comments:</h4>
       </div>
-      <div class="col-md-10 col-sm-10">
+      <div class="col-md-9 col-sm-10">
         <textarea id="comments" name="comments" placeholder="Exceptional noodle thrower, good alliance choice, robot malfunction..."
         class="com-field form-control"></textarea>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-md-12 col-sm-12">
+      <div class="col-md-9 col-sm-12">
         <div>
           <input type="submit" id="submit" class="btn btn-primary pull-right" value="Submit"/>
         </div>

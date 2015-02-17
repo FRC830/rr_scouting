@@ -44,15 +44,17 @@ $(function() {
                 score: {
                     minlength: 1,
                     required: true,
+                    min: 0,
                 },
                 penalties: {
                     minlength: 1,
                     required: true,
-                }
+                    min: 0,
+                },
             },
             highlight: function(element) {
                 $(element).closest('.form-field').addClass('has-error');
-                count++;
+                //count++;
             },
             unhighlight: function(element) {
                 $(element).closest('.form-field').removeClass('has-error');
