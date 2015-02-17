@@ -2,61 +2,63 @@ $(function() {
     function mkbutton() {
         return $('<a>').attr('href', '#').addClass('btn btn-default').click(function(e){e.preventDefault();});
     }
-    $('form#scouting-form').validate({
-        rules: {
-            match_id: {
-                minlength: 1,
-                maxlength: 15,
-                required: true
+    if (window.location.href.indexOf('no-validation') == -1) {
+        $('form#scouting-form').validate({
+            rules: {
+                match_id: {
+                    minlength: 1,
+                    maxlength: 15,
+                    required: true
+                },
+                team_id: {
+                    minlength: 1,
+                    maxlength: 15,
+                    required: true
+                },
+                auton_start: {
+                    required: true
+                },
+                totes_stacked: {
+                    minlength: 1,
+                    required: true
+                },
+    			tote_height: {
+    				required: true
+    			},
+    			bins_stacked: {
+    				minlength: 1,
+    				required: true
+    			},
+                bin_height: {
+                    minlength: 1,
+                    required: true
+                },
+    			coop: {
+    				required: true
+    			},
+    			score: {
+    				minlength: 1,
+    				required: true
+    			},
+    			penalties: {
+    				minlength: 1,
+    				required: true
+    			}
             },
-            team_id: {
-                minlength: 1,
-                maxlength: 15,
-                required: true
-            }/*,
-            auton_start: {
-                required: true
+            highlight: function(element) {
+                $(element).closest('.form-field').addClass('has-error');
             },
-            totes_stacked: {
-                minlength: 1,
-                required: true
+            unhighlight: function(element) {
+                $(element).closest('.form-field').removeClass('has-error');
             },
-			tote_height: {
-				required: true
-			},
-			bins_stacked: {
-				minlength: 1,
-				required: true
-			},
-            bin_height: {
-                minlength: 1,
-                required: true
-            },
-			coop: {
-				required: true
-			},
-			score: {
-				minlength: 1,
-				required: true
-			},
-			penalties: {
-				minlength: 1,
-				required: true
-			}*/
-        },
-        highlight: function(element) {
-            $(element).closest('.form-field').addClass('has-error');
-        },
-        unhighlight: function(element) {
-            $(element).closest('.form-field').removeClass('has-error');
-        },
-        errorElement: 'span',
-        errorClass: 'help-block',
-        errorPlacement: function(error, element) {
-            // disable messages
-            return true;
-        }
-    });
+            errorElement: 'span',
+            errorClass: 'help-block',
+            errorPlacement: function(error, element) {
+                // disable messages
+                return true;
+            }
+        });
+    }
     function requestFullscreen() {
         var doc = window.document.documentElement;
         if (doc.requestFullscreen)
