@@ -22,12 +22,11 @@ if not os.path.isdir('depends/waitress-submodule/waitress'):
 import bottle
 bottle.TEMPLATE_PATH.append('web')
 
-# Monkey patch!
-_orig_run = bottle.WaitressServer.run
-def _new_run(self, app):
-    open_page()
-    _orig_run(self, app)
-bottle.WaitressServer.run = _new_run
+import waitress
+class WaitressAdapter(bottle.WaitressServer):
+    def run(self, handler):
+        open_page()
+        waitress.serve(handler, host=self.host, port=self.port, threads=6)
 
 def server_running():
     try:
@@ -47,4 +46,4 @@ if server_running():
     open_page()
 else:
     import web.server
-    web.server.main('0.0.0.0', 8000)
+    web.server.main('0.0.0.0', 8000, WaitressAdapter)
