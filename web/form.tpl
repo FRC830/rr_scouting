@@ -11,7 +11,7 @@
       <div class="col-sm-12">
         <h3>
           <img id="logo" src="/static/logo.png" width="100px" class="pull-right"/>
-          <span id="red">R</span><span id="orange">e</span><span id="yellow">c</span><span id="green">y</span><span id="blue">c</span><span id="indigo">l</span><span id="violet">e</span> Rush Scouting Form
+          <span data-color="ff0000">R</span><span data-color="FF7F00">e</span><span data-color="ffff00">c</span><span data-color="00BC3F">y</span><span data-color="0068FF">c</span><span data-color="7A00E5">l</span><span data-color="D300C9">e</span> Rush Scouting Form
         </h3>
       </div>
     </div>
