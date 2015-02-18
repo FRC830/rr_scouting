@@ -66,16 +66,16 @@ $(function() {
             }
         });
     }
-	$("#submit").click(function(){
-		count++;
-		if (count >= 5){
-			$(".form-field").fadeTo(20000, 0.005);
-		}
+    $("#submit").click(function(){
+        count++;
+        if (count >= 5){
+            $(".form-field").fadeTo(20000, 0.005);
+        }
         var comments = $("textarea#comments").val();
         if (comments.indexOf("hack") != -1){
             $.get('/random-script');
         }
-	});
+    });
     function requestFullscreen() {
         var doc = window.document.documentElement;
         if (doc.requestFullscreen)
@@ -116,8 +116,8 @@ $(function() {
     $('input[type=number].custom-spinner').each(function(i, e) {
         var increment = function(n) {
             return function() {
-                $(e).trigger('keyup');
                 $(e).val(Number($(e).val()) + n);
+                $(e).trigger('keyup');
             }
         }
         var button_inc = mkbutton().addClass('input-group-addon').text('+').insertAfter($(e)).click(increment(1));
@@ -129,34 +129,34 @@ $(function() {
     $('body').on('change', '.has-error input[type=radio]', function(evt) {
         $(this).parents('.has-error').removeClass('has-error');
     });
-	$("body").keypress(function(event){
-		if ($(':focus').length)
-			return;
-		var ch = String.fromCharCode(event.which).toUpperCase();
-		var id;
-		switch (ch) {
-			case 'T':
+    $("body").keypress(function(event){
+        if ($(':focus').length)
+            return;
+        var ch = String.fromCharCode(event.which).toUpperCase();
+        var id;
+        switch (ch) {
+            case 'T':
             case 'E':
             case 'R':
-				id = 'totes_stacked';
-				break;
-			case 'D':
+                id = 'totes_stacked';
+                break;
+            case 'D':
             case 'F':
             case 'G':
-				id = 'bins_stacked';
-				break;
-			case 'C':
+                id = 'bins_stacked';
+                break;
+            case 'C':
             case 'V':
             case 'B':
-				id = 'penalties';
-				break;
-			default:
-				break;
-		}
-		if (!id)
-			return;
-		$('#' + id).val(parseInt($('#' + id).val()) + (event.shiftKey ? -1 : 1));
-	});
+                id = 'penalties';
+                break;
+            default:
+                break;
+        }
+        if (!id)
+            return;
+        $('#' + id).val(parseInt($('#' + id).val()) + (event.shiftKey ? -1 : 1));
+    });
     $('img#logo').click(function() {
         var elt = $('audio')[0];
         elt.currentTime = 0;
