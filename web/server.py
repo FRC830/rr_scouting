@@ -40,4 +40,4 @@ def callback():
 
 def main(host, port):
     app = bottle.app()
-    app.run(host=host, port=port, debug=True)
+    app.run(host=host, port=port, debug=True, server='waitress')

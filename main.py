@@ -6,16 +6,17 @@ else:
 def abspath(p):
     return os.path.join(os.path.dirname(__file__), p)
 sys.path.append(abspath('depends'))
+sys.path.append(abspath('depends/waitress-submodule'))
 
 import bottle
 bottle.TEMPLATE_PATH.append('web')
 
 # Monkey patch!
-_orig_run = bottle.WSGIRefServer.run
+_orig_run = bottle.WaitressServer.run
 def _new_run(self, app):
     open_page()
     _orig_run(self, app)
-bottle.WSGIRefServer.run = _new_run
+bottle.WaitressServer.run = _new_run
 
 def server_running():
     try:

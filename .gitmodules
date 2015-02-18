@@ -1,0 +1,3 @@
+[submodule "depends/waitress-submodule"]
+	path = depends/waitress-submodule
+	url = https://github.com/Pylons/waitress
