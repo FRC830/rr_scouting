@@ -149,7 +149,7 @@ $(function() {
     });
 
 	//Easter eggs
-	$("#submit").click(function(){
+    $("#submit").click(function(){
         count++;
         if (count >= 5){
             $(".form-field").fadeTo(20000, 0.005);
@@ -157,8 +157,10 @@ $(function() {
         var comments = $("textarea#comments").val();
         if (comments.indexOf("hack") != -1){
             $rob = $("<img src = '/static/robber.png' width = '50px' id='robber'/>");
-			$("#hacker").append($rob);
-			$("#robber").animate({left: "+=1000px"},1000);//halp
+            $rob.css({ position:'relative'});
+            $("#hacker").append($rob);
+            $("#robber").animate({left: "+=1500px"},5000);
+            $("#robber").fadeOut(5000);
         }
     });
 
