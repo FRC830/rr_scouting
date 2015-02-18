@@ -10,6 +10,13 @@ sys.path.append(abspath('depends'))
 import bottle
 bottle.TEMPLATE_PATH.append('web')
 
+# Monkey patch!
+_orig_run = bottle.WSGIRefServer.run
+def _new_run(self, app):
+    open_page()
+    _orig_run(self, app)
+bottle.WSGIRefServer.run = _new_run
+
 def server_running():
     try:
         c = urlopen('http://localhost:8000/test').read()
@@ -24,15 +31,8 @@ def open_page():
         return
     webbrowser.open('http://localhost:8000')
 
-class evil_callback_thread(threading.Thread):
-    daemon = True
-    def run(self):
-        time.sleep(3)
-        open_page()
-
 if server_running():
     open_page()
 else:
     import web.server
-    evil_callback_thread().start()
     web.server.main('0.0.0.0', 8000)
