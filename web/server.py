@@ -38,6 +38,6 @@ def callback(path):
 def callback():
     pass
 
-def main(host, port):
+def main(host, port, adapter):
     app = bottle.app()
-    app.run(host=host, port=port, debug=True, server='waitress')
+    app.run(host=host, port=port, debug=True, server=adapter)
