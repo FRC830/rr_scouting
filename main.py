@@ -1,12 +1,23 @@
-import os, sys, threading, time, webbrowser
+import os, subprocess, sys, threading, time, webbrowser
 if sys.version[0] == '2':
     from urllib2 import urlopen
 else:
     from urllib.request import urlopen
-def abspath(p):
-    return os.path.join(os.path.dirname(__file__), p)
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+def abspath(*parts):
+    return os.path.join(os.getcwd(), *parts)
 sys.path.append(abspath('depends'))
-sys.path.append(abspath('depends/waitress-submodule'))
+sys.path.append(abspath('depends', 'waitress-submodule'))
+
+if not os.path.isdir('depends/waitress-submodule/waitress'):
+    print('Warning: submodules not initialized properly')
+    try:
+        err = subprocess.call(['git', 'submodule', 'update', '--init'])
+        assert not err, 'git error'
+    except Exception as e:
+        print('Failed to update submodules: %s' % e)
+        sys.exit(1)
 
 import bottle
 bottle.TEMPLATE_PATH.append('web')
