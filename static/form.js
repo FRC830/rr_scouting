@@ -165,5 +165,8 @@ $(function() {
     });
     $('[data-color]').click(function(event) {
         $('body').css("background-color", "#" + $(this).data('color'));
-    })
+    });
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    });
 });
