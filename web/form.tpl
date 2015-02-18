@@ -11,7 +11,7 @@
       <div class="col-sm-12">
         <h3>
           <img id="logo" src="/static/logo.png" width="100px" class="pull-right"/>
-          Recycle Rush Scouting Form
+          <span id="red">R</span><span id="orange">e</span><span id="yellow">c</span><span id="green">y</span><span id="blue">c</span><span id="indigo">l</span><span id="violet">e</span> Rush Scouting Form
         </h3>
       </div>
     </div>
@@ -60,13 +60,16 @@
             <input type="checkbox" name="auton_robot_move" id="auton_robot_move" value="1">Robot moves into auto zone
           </label>
           <label class="btn btn-default">
-            <input type="checkbox" name="auton_tote_move" id="auton_tote_move" value="1">Move tote into auto zone
+            <input type="checkbox" name="auton_tote_move" id="auton_tote_move" value="1">Move tote to auto zone
           </label>
           <label class="btn btn-default">
-            <input type="checkbox" name="auton_container_move" id="auton_container_move" value="1">Move Recycling container into auto zone
+            <input type="checkbox" name="auton_container_move" id="auton_container_move" value="1">Move Recycling container to auto zone
           </label>
           <label class="btn btn-default">
             <input type="checkbox" name="auton_tote_stack" id="auton_tote_stack" value="1">3 tote stack!
+          </label>
+          <label class="btn btn-default">
+            <input type="checkbox" name="auton_other" id="auton_other" value="1">Other
           </label>
         </div>
     </div>

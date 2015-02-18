@@ -157,9 +157,31 @@ $(function() {
             return;
         $('#' + id).val(parseInt($('#' + id).val()) + (event.shiftKey ? -1 : 1));
     });
+	//Easter eggs
     $('img#logo').click(function() {
         var elt = $('audio')[0];
         elt.currentTime = 0;
         elt.play();
     });
+	$('#red').click(function() {
+		$('body').css("background-color", "#ff0000");
+	});
+	$('#orange').click(function() {
+		$('body').css("background-color", "#FF7F00");
+	});
+	$('#yellow').click(function() {
+		$('body').css("background-color", "#ffff00");
+	});
+	$('#green').click(function() {
+		$('body').css("background-color", "#00BC3F");
+	});
+	$('#blue').click(function() {
+		$('body').css("background-color", "#0068FF");
+	});
+	$('#indigo').click(function() {
+		$('body').css("background-color", "#7A00E5");
+	});
+	$('#violet').click(function() {
+		$('body').css("background-color", "#D300C9");
+	});
 });
