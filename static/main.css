@@ -26,3 +26,10 @@ h3 {
     width: 22em;
     height: 14em;
 }
+
+#submit {
+	background: rgb(255,203,6);
+	border: 1px solid rgb(47,47,123);
+	color: rgb(47,47,123);
+	font-size: 16px;
+}
