@@ -1,25 +1,16 @@
-import pickle, sqlite3
-# def db_save(path, data):
-    # c = None
-    # try:
-        # if not isinstance(path, str):
-            # raise ValueError
-        # conn = sqlite3.connect(path)
-        # c = conn.cursor()
-        # c.execute('create table if not exists "data-table" (data text)')
-        # c.execute('insert into "data-table" values (?)', pickle.dumps(data))
-        # conn.commit()
-    # finally:
-        # if c:
-            # c.close()
-
 def export(data):
+    new_line = "\n"
+    file = open("match_data.csv", "r")
+    lines = file.read();
+    file.close();
+    if not lines:
+        #there is no data in the file, do not add a newline
+        new_line = ""
     with open("match_data.csv", "a") as save_file:
         d_to_write = str(order_data(data))[1:len(str(order_data(data)))-1].replace("'", "")
-        save_file.write("\n"+d_to_write)#To Do: make this not put a new line before the first line of the file
+        save_file.write(new_line+d_to_write)
         print(d_to_write)
-    print("Data saved!")
-        
+    print("Data saved!")  
 
 def order_data(dict):
     order = ["match_id", "team_id", "auton_start", "auton_robot_move", "auton_tote_move", "auton_container_move", "auton_tote_stack", "bottom_stacker",
