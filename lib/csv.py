@@ -1,26 +1,41 @@
-def export(data):
-    new_line = "\n"
-    file = open("match_data.csv", "r")
-    lines = file.read();
-    file.close();
-    if not lines:
-        #there is no data in the file, do not add a newline
-        new_line = ""
-    with open("match_data.csv", "a") as save_file:
-        d_to_write = str(order_data(data))[1:len(str(order_data(data)))-1].replace("'", "")
-        save_file.write(new_line+d_to_write)
-        print(d_to_write)
-    print("Data saved!")  
+import threading, os
 
-def order_data(dict):
-    order = ["match_id", "team_id", "auton_start", "auton_robot_move", "auton_tote_move", "auton_container_move", "auton_tote_stack", "bottom_stacker",
-             "top_stacker", "bulldozer", "other_capabilities", "totes_stacked", "tote_height", "bins_stacked", "bin_height", "coop", 
-             "push_noodle", "noodle_pickup", "noodle_from_human", "noodle_in_bins", "step_containers", "score", "penalties", "comments"]
-    final_data = [0 for i in range(len(order))]
-    for key in dict:
+fields = ["match_id", "team_id", "auton_start", "auton_robot_move", "auton_tote_move",
+          "auton_container_move", "auton_tote_stack", "bottom_stacker",
+          "top_stacker", "bulldozer", "other_capabilities", "totes_stacked",
+          "tote_height", "bins_stacked", "bin_height", "coop", "push_noodle",
+          "noodle_pickup", "noodle_from_human", "noodle_in_bins",
+          "step_containers", "score", "penalties", "comments"]
+
+_export_lock = threading.Lock()
+def export(data, path):
+    with _export_lock:
+        add_headers = False
+        if not os.path.exists(path):
+            add_headers = True
+            contents = ''
+        else:
+            with open(path, 'r') as f:
+                lines = filter(len, map(lambda line: line.rstrip('\r\n'), f.readlines()))
+                if not len(lines) or not lines[0].startswith(fields[0]):
+                    add_headers = True
+                    contents = '\n'.join(lines) + '\n'
+        if add_headers:
+            with open(path, 'w') as f:
+                f.write(','.join(fields) + '\n')
+                f.write(contents)
+        with open(path, 'a') as f:
+            line = str(order_data(data))[1:-1].replace("'", "")
+            f.write(line + '\n')
+            print(line)
+        print("Data saved!")
+
+def order_data(data):
+    final_data = [0 for i in range(len(fields))]
+    for key in data:
         try:
-            pos = order.index(key)
-            final_data[pos] = dict[key]
+            pos = fields.index(key)
+            final_data[pos] = data[key]
         except ValueError:
             pass
     return final_data

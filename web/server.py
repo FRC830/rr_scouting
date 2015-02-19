@@ -21,9 +21,8 @@ def callback():
     f = request.forms
     data = {}
     for k in f:
-        #print('%s -> %s' % (k, f.getall(k) if len(f.getall(k)) > 1 else f.get(k)))
-        data[k] = f.getall(k) if len(f.getall(k)) > 1 else f.get(k)
-    csv.export(data)
+        data[k] = f.get(k)
+    csv.export(data, "match_data.csv")
     redirect('/form')
 
 @route('/static/<path:path>')
