@@ -1,3 +1,5 @@
+import sys
+
 import bottle
 from bottle import post, redirect, request, route, static_file, view
 
@@ -39,4 +41,5 @@ def callback():
 
 def main(host, port, adapter):
     app = bottle.app()
-    app.run(host=host, port=port, debug=True, server=adapter)
+    app.run(host=host, port=port, debug=True, server=adapter,
+        reloader=('--reload' in sys.argv))
