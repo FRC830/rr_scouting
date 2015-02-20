@@ -3,7 +3,7 @@ import sys
 import bottle
 from bottle import post, redirect, request, route, static_file, view
 
-import lib.csv as csv
+import lib.csvexport as csvexport
 
 @route('/')
 def callback():
@@ -24,7 +24,7 @@ def callback():
     data = {}
     for k in f:
         data[k] = f.get(k)
-    csv.export(data, "match_data.csv")
+    csvexport.export(csvexport.process(data), "match_data.csv")
     redirect('/form')
 
 @route('/static/<path:path>')
