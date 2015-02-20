@@ -168,13 +168,10 @@
         <label class="btn btn-default">
           <input type="checkbox" name="push_noodle" id="push_noodle" value="1">Push on ground
         </label>
-        <label class="btn btn-default">
-          <input type="checkbox" name="noodle_pickup" id="noodle_pickup" value="1">Pick up from ground
-        </label>
-        <label class="btn btn-default">
+        <label class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Robot allows human to place a noodle in a bin">
           <input type="checkbox" name="noodle_from_human" id="noodle_from_human" value="1">Get from human
         </label>
-        <label class="btn btn-default">
+        <label class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Robot can put a noodle in a bin without help from the human">
           <input type="checkbox" name="noodle_in_bins" id="noodle_in_bins" value="1">Put in the bins
         </label>
       </div>
@@ -228,7 +225,7 @@
         <h4>Comments:</h4>
       </div>
       <div class="col-md-9 col-sm-10">
-        <textarea id="comments" name="comments" placeholder="Exceptional noodle thrower, good alliance choice, robot malfunction..."
+        <textarea id="comments" name="comments" placeholder='Exceptional noodle thrower, good alliance choice, robot malfunction...'
         class="com-field form-control"></textarea>
       </div>
     </div>

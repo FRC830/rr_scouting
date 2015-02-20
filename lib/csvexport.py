@@ -19,7 +19,6 @@ fields = [
     "bin_height",
     "coop",
     "push_noodle",
-    "noodle_pickup",
     "noodle_from_human",
     "noodle_in_bins",
     "step_containers",
