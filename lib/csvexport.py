@@ -43,7 +43,7 @@ def export(data, path):
                     contents = '\n'.join(lines) + '\n'
         if add_headers:
             with open(path, 'w') as f:
-                writer = csv.DictWriter(f, fieldnames=fields)
+                writer = csv.DictWriter(f, fieldnames=fields, lineterminator='\n')
                 writer.writeheader()
                 #f.write(','.join(fields) + '\n')
                 f.write(contents)
