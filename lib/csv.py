@@ -16,7 +16,7 @@ def export(data, path):
             contents = ''
         else:
             with open(path, 'r') as f:
-                lines = filter(len, map(lambda line: line.rstrip('\r\n'), f.readlines()))
+                lines = list(filter(len, map(lambda line: line.rstrip('\r\n'), f.readlines())))
                 if not len(lines) or not lines[0].startswith(fields[0]):
                     add_headers = True
                     contents = '\n'.join(lines) + '\n'
