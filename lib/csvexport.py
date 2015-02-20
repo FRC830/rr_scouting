@@ -47,7 +47,7 @@ def export(data, path):
                 #f.write(','.join(fields) + '\n')
                 f.write(contents)
         with open(path, 'a') as f:
-            writer = csv.DictWriter(f, fieldnames=fields)
+            writer = csv.DictWriter(f, fieldnames=fields, lineterminator='\n')
             writer.writerow(data)
 
 def process(data):
