@@ -38,7 +38,7 @@
     <h3>Autonomous</h3>
     <div class="row form-group form-field">
       <div class="col-md-3">
-        <h4>Auton Starting Position</h4>
+        <h4>Auton Starting Position:</h4>
       </div>
       <div class="col-md-9 btn-group" data-toggle="buttons">
         <label class="btn btn-default">
@@ -69,7 +69,7 @@
           <label class="btn btn-default">
             <input type="checkbox" name="auton_tote_stack" id="auton_tote_stack" value="1">3 tote stack!
           </label>
-          <label class="btn btn-default">
+          <label class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Please specify in comments">
             <input type="checkbox" name="auton_other" id="auton_other" value="1">Other
           </label>
         </div>
@@ -147,11 +147,13 @@
 
     <div class="row form-group form-field">
       <div class="col-md-3">
-        <h4>Coopertition</h4>
+        <h4>Coopertition:</h4>
       </div>
       <div class="col-md-9 btn-group" data-toggle="buttons">
-        <label class="btn btn-default"><input type="radio" name="coop" id="coop" value="start">Start</label>
-        <label class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Implies ability to start a stack">
+        <label class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Robot can place totes on the step">
+          <input type="radio" name="coop" id="coop" value="start">Start
+        </label>
+        <label class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Robot can place totes onto other totes already on the step">
           <input type="radio" name="coop" id="coop" value="add">Add
         </label>
         <label class="btn btn-default"><input type="radio" name="coop" id="coop" value="none">Dis foo didn't do nuthin'</label>
@@ -179,8 +181,16 @@
     </div>
     <div class="row form-group form-field">
       <div class="col-md-3">
-        <h4>Get Containers From Step?</h4>
+        <h4>Recycling Containers Taken From Step:</h4>
       </div>
+      <div class="col-md-9 btn-group" data-toggle="buttons">
+        <label class="btn btn-default active"><input type="radio" name="step_containers" id="step_containers" value="0" checked="checked">None</label>
+        <label class="btn btn-default"><input type="radio" name="step_containers" id="step_containers" value="1">1 container</label>
+        <label class="btn btn-default"><input type="radio" name="step_containers" id="step_containers" value="2">2 containers</label>
+        <label class="btn btn-default"><input type="radio" name="step_containers" id="step_containers" value="3">3 containers</label>
+        <label class="btn btn-default"><input type="radio" name="step_containers" id="step_containers" value="4">4 containers</label>
+      </div>
+      <!--
       <div class="col-md-9 btn-group" data-toggle="buttons">
         <label class="btn btn-default">
           <input type="radio" name="step_containers" id="step_containers" value="1" class="form-control">Yes
@@ -189,6 +199,7 @@
           <input type="radio" name="step_containers" id="step_containers" value="0" class="form-control">No
         </label>
       </div>
+      -->
     </div>
 
     <div class="row form-group">
