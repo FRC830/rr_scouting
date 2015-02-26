@@ -182,11 +182,19 @@ $(function() {
         }
         var score = $("#score").val();
         if (score<10){
-            alert("Achievement Unlocked! \n'Scout a terrible alliance (score < 10)'");
+            alert("Achievement Unlocked! \n'Scout a terrible alliance \n(score < 10)'");
         }
         var team = $("#team_id").val();
         if (team == 830){
             alert("Achievement Unlocked! \nScoutin' the home team");
+        }
+        var tipped = $("#stacks_tipped").val();
+        if (tipped>=3){
+            alert("Achievement Unlocked! \n\"Droppin' Stacks\" \n(scout a robot that tips over 3 )");
+        }
+        var penalties = $("#penalties").val();
+        if (penalties>=3){
+            alert("Achievement Unlocked! \n Chillin' like a villain \n(scout a robot with over 3 penalties)");
         }
     });
     $("#hashtag").click(function(){
