@@ -162,6 +162,9 @@ $(function() {
             $("#robber").animate({left: "+=1500px"},5000);
             $("#robber").fadeOut(5000);
         }
+        if (comments.indexOf("dash") != -1){
+            $("#game").attr("src", "/static/dash.png");
+        }
     });
 
     $('img#logo').click(function() {
