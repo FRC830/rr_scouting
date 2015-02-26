@@ -1,4 +1,5 @@
 var count = 0;
+var hashtags = 0;
 $(function() {
     function mkbutton() {
         return $('<a>').attr('href', '#').addClass('btn btn-default').click(function(e){e.preventDefault();});
@@ -164,6 +165,13 @@ $(function() {
         }
         if (comments.indexOf("dash") != -1){
             $("#game").attr("src", "/static/dash.png");
+        }
+    });
+    $("#hashtag").click(function(){
+        hashtags++;
+        if (hashtags >= 3){
+            $(".btn").text("#");
+            $("h4").text("#");
         }
     });
 

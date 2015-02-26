@@ -19,7 +19,7 @@
     <div class="row form-group">
       <div class="col-md-4 col-xs-12">
         <div class="form-field">
-          <label for="match_id" class="col-xs-4 control-label">Match #</label>
+          <label for="match_id" class="col-xs-4 control-label">Match <span id="hashtag">#</span></label>
           <div class="col-xs-8">
             <input id="match_id" name="match_id" type="number" class="form-control"/>
           </div>
