@@ -27,6 +27,11 @@ $(function() {
                     required: true,
                     min: 0
                 },
+                stacks_tipped: {
+                    minlength: 1,
+                    required: true,
+                    min: 0
+                },
                 tote_height: {
                     required: true,
                 },
@@ -165,6 +170,23 @@ $(function() {
         }
         if (comments.indexOf("dash") != -1){
             $("#game").attr("src", "/static/dash.png");
+        }
+        
+        var match = $("#match_id").val();
+        if (match == 1){
+            alert("Achievement Unlocked! \n'First match scouted!'");
+        }else if (match == 40){
+            alert("Achievement Unlocked! \n'Half way done! Keep up the slightly-above-average work!'");
+        }else if (match == 80){
+            alert("Achievement Unlocked! \nYAY You're probably basically done now!");
+        }
+        var score = $("#score").val();
+        if (score<10){
+            alert("Achievement Unlocked! \n'Scout a terrible alliance (score < 10)'");
+        }
+        var team = $("#team_id").val();
+        if (team == 830){
+            alert("Achievement Unlocked! \nScoutin' the home team");
         }
     });
     $("#hashtag").click(function(){

@@ -14,6 +14,7 @@ fields = [
     "bulldozer",
     "other_capabilities",
     "totes_stacked",
+    "stacks_tipped",
     "tote_height",
     "bins_stacked",
     "bin_height",

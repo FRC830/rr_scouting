@@ -105,6 +105,17 @@
         <span class="error-placeholder"></span>
       </div>
     </div>
+    
+    <div class="row form-group form-field">
+      <label for="stacks_tipped" class="col-md-3 col-sm-4 control-label"><h4>Totes Stacks Knocked Over:</h4></label>
+      <div class="col-md-3 col-sm-8">
+        <span class="input-group form-field">
+            <input id="stacks_tipped" name="stacks_tipped" type="number" class="form-control custom-spinner" value="0" data-toggle="tooltip" data-placement="bottom" title="Not including totes tipped while trying to score them"/>
+        </span>
+        <span class="error-placeholder"></span>
+      </div>
+    </div>
+    
     <div class="row form-group form-field">
       <div class="col-md-3 col-sm-12">
         <h4>Highest Tote Stack:</h4>
