@@ -76,6 +76,8 @@
     </div>
 
     <h3>Teleoperated</h3>
+    
+    <!--
     <div class="row form-group form-field">
       <div class="col-md-3 col-sm-12">
         <h4>Stacking capabilities:</h4>
@@ -95,22 +97,26 @@
         </label>
       </div>
     </div>
-
-    <div class="row form-group form-field">
-      <label for="totes_stacked" class="col-md-3 col-sm-4 control-label"><h4>Totes Stacked On Platform:</h4></label>
-      <div class="col-md-3 col-sm-8">
-        <span class="input-group form-field">
-          <input id="totes_stacked" name="totes_stacked" type="number" class="form-control custom-spinner" value="0"/>
-        </span>
-        <span class="error-placeholder"></span>
+    -->
+    <div class = "row form-group form-field">
+      <div class="col-md-3 col-sm-12">
+        <h4>Tote Aquisitiotoriality</h4>
+      </div>
+      <div class="col-lg-9 btn-group" data-toggle="buttons">
+        <label class="btn btn-default">
+          <input type="checkbox" name="feeder_station_totes" id="feeder_station_totes" value="1">Get totes from feeder station
+        </label>
+        <label class="btn btn-default">
+          <input type="checkbox" name="landfill_totes" id="landfill_totes" value="1">Get totes from landfill
+        </label>
       </div>
     </div>
     
     <div class="row form-group form-field">
-      <label for="stacks_tipped" class="col-md-3 col-sm-4 control-label"><h4>Tote Stacks Knocked Over:</h4></label>
+      <label for="totes_stacked" class="col-md-3 col-sm-4 control-label"><h4>Totes Placed On Platform:</h4></label>
       <div class="col-md-3 col-sm-8">
-        <span class="input-group form-field">
-            <input id="stacks_tipped" name="stacks_tipped" type="number" class="form-control custom-spinner" value="0" data-toggle="tooltip" data-placement="bottom" title="Not including totes tipped while trying to score them"/>
+        <span class="input-group form-field" data-toggle="tooltip" data-placement="bottom" title="Includes totes both stacked and not stacked">
+          <input id="totes_stacked" name="totes_stacked" type="number" class="form-control custom-spinner" value="0"/>
         </span>
         <span class="error-placeholder"></span>
       </div>
@@ -131,6 +137,16 @@
       </div>
     </div>
 
+    <div class="row form-group form-field">
+      <label for="stacks_tipped" class="col-md-3 col-sm-4 control-label"><h4>Tote Stacks Knocked Over:</h4></label>
+      <div class="col-md-3 col-sm-8">
+        <span class="input-group form-field">
+            <input id="stacks_tipped" name="stacks_tipped" type="number" class="form-control custom-spinner" value="0" data-toggle="tooltip" data-placement="bottom" title="Not including totes tipped while trying to score them"/>
+        </span>
+        <span class="error-placeholder"></span>
+      </div>
+    </div>
+    
     <div class="row form-group form-field">
       <div class="col-md-3 col-sm-4">
         <h4>Recycling Containers Scored:</h4>
@@ -173,18 +189,12 @@
 
     <div class="row form-group form-field">
       <div class="col-md-3">
-        <h4>Noodle Capabilities:</h4>
+        <h4 id="binified">Noodles Scored:</h4>
       </div>
-      <div class="col-md-9 btn-group" data-toggle="buttons">
-        <label class="btn btn-default">
-          <input type="checkbox" name="push_noodle" id="push_noodle" value="1">Push on ground
-        </label>
-        <label class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Robot allows human to place a noodle in a bin">
-          <input type="checkbox" name="noodle_from_human" id="noodle_from_human" value="1">Get from human
-        </label>
-        <label class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Robot can put a noodle in a bin without help from the human">
-          <input type="checkbox" name="noodle_in_bins" id="noodle_in_bins" value="1">Put in the bins
-        </label>
+      <div class="col-md-3 col-sm-8">
+        <span class="input-group form-field">
+          <input id="noodles_scored" name="noodles_scored" type="number" class="form-control custom-spinner" value="0"/>
+        </span>
       </div>
     </div>
     <div class="row form-group form-field">

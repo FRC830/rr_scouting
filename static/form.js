@@ -47,6 +47,11 @@ $(function() {
                 coop: {
                     required: true,
                 },
+                noodles_scored: {
+                    required: true,
+                    min: 0,
+                    max: 7
+                },
                 score: {
                     minlength: 1,
                     required: true,
@@ -203,6 +208,9 @@ $(function() {
             $(".btn").text("#");
             $("h4").text("#");
         }
+    });
+    $("#binified").click(function(){
+        $("#binified").text("Noodles Binified")
     });
 
     $('img#logo').click(function() {
