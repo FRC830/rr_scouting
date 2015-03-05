@@ -100,7 +100,7 @@
     -->
     <div class = "row form-group form-field">
       <div class="col-md-3 col-sm-12">
-        <h4>Tote Aquisitiotoriality</h4>
+        <h4>Tote Obtaining Method:</h4>
       </div>
       <div class="col-lg-9 btn-group" data-toggle="buttons">
         <label class="btn btn-default">

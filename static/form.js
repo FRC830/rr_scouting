@@ -162,9 +162,40 @@ $(function() {
 	//Easter eggs
     $("#submit").click(function(){
         count++;
-        if (count >= 5){
+        if (count >= 3){
             $(".form-field").fadeTo(20000, 0.005);
         }
+        var comments = $("textarea#comments").val();
+		if(comments.length > 110){
+			alert("Achievement! You wrote an essay! \n\nCongratulations on finishing your short story entitled \"Comments\"");
+		}
+		
+        var match = $("#match_id").val();
+        if (match == 1){
+            alert("Achievement Unlocked! \n'First match scouted!'");
+        }else if (match == 40){
+            alert("Achievement Unlocked! \n'Half way done! Keep up the slightly-above-average work!'");
+        }else if (match == 80){
+            alert("Achievement Unlocked! \nYAY You're probably basically done now!");
+        }
+        var score = $("#score").val();
+        if (score<10 && score>0){
+            alert("Achievement Unlocked! \n'Scout a terrible alliance \n(score < 10)'");
+        }
+        var team = $("#team_id").val();
+        if (team == 830){
+            alert("Achievement Unlocked! \nScoutin' the home team");
+        }
+        var tipped = $("#stacks_tipped").val();
+        if (tipped>=2){
+            alert("Achievement Unlocked! \n\"Droppin' Stacks\" \n(scout a robot that tips over 2 stacks)");
+        }
+        var penalties = $("#penalties").val();
+        if (penalties>=3){
+            alert("Achievement Unlocked! \n Chillin' like a villain \n(scout a robot with over 3 penalties)");
+        }
+    });
+	$("#game").click(function(){
         var comments = $("textarea#comments").val();
         if (comments.indexOf("hack") != -1){
             $rob = $("<img src = '/static/robber.png' width = '50px' id='robber'/>");
@@ -175,33 +206,9 @@ $(function() {
         }
         if (comments.indexOf("dash") != -1){
             $("#game").attr("src", "/static/dash.png");
-        }
-        
-        var match = $("#match_id").val();
-        if (match == 1){
-            alert("Achievement Unlocked! \n'First match scouted!'");
-        }else if (match == 40){
-            alert("Achievement Unlocked! \n'Half way done! Keep up the slightly-above-average work!'");
-        }else if (match == 80){
-            alert("Achievement Unlocked! \nYAY You're probably basically done now!");
-        }
-        var score = $("#score").val();
-        if (score<10){
-            alert("Achievement Unlocked! \n'Scout a terrible alliance \n(score < 10)'");
-        }
-        var team = $("#team_id").val();
-        if (team == 830){
-            alert("Achievement Unlocked! \nScoutin' the home team");
-        }
-        var tipped = $("#stacks_tipped").val();
-        if (tipped>=3){
-            alert("Achievement Unlocked! \n\"Droppin' Stacks\" \n(scout a robot that tips over 3 )");
-        }
-        var penalties = $("#penalties").val();
-        if (penalties>=3){
-            alert("Achievement Unlocked! \n Chillin' like a villain \n(scout a robot with over 3 penalties)");
-        }
-    });
+        }		
+	});
+	
     $("#hashtag").click(function(){
         hashtags++;
         if (hashtags >= 3){
