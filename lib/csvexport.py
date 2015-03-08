@@ -24,6 +24,9 @@ fields = [
     "comments",
 ]
 
+def getlines(f):
+    return list(filter(len, map(lambda line: line.rstrip('\r\n'), f.readlines())))
+
 _export_lock = threading.Lock()
 def export(data, path):
     with _export_lock:
@@ -33,7 +36,7 @@ def export(data, path):
             contents = ''
         else:
             with open(path, 'r') as f:
-                lines = list(filter(len, map(lambda line: line.rstrip('\r\n'), f.readlines())))
+                lines = getlines(f)
                 if not len(lines) or not lines[0].startswith(fields[0]):
                     add_headers = True
                     contents = '\n'.join(lines) + '\n'
@@ -41,11 +44,17 @@ def export(data, path):
             with open(path, 'w') as f:
                 writer = csv.DictWriter(f, fieldnames=fields, lineterminator='\n')
                 writer.writeheader()
-                #f.write(','.join(fields) + '\n')
                 f.write(contents)
         with open(path, 'a') as f:
             writer = csv.DictWriter(f, fieldnames=fields, lineterminator='\n')
             writer.writerow(data)
+        lines = []
+        with open(path, 'r') as f:
+            lines = getlines(f)
+        if len(lines) > 2 and lines[-1] == lines[-2]:
+            with open(path, 'w') as f:
+                f.write('\n'.join(lines[:-1]))
+                f.write('\n')
 
 def process(data):
     for f in fields:
