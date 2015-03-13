@@ -24,6 +24,13 @@ def callback():
     data = {}
     for k in f:
         data[k] = f.get(k)
+    print('Saving data')
+    with open('_log.txt', 'a') as f:
+        try:
+            f.write(str(data))
+            f.write('\n\n')
+        except: # ugly
+            pass
     csvexport.export(csvexport.process(data), "match_data.csv")
     redirect('/form')
 
@@ -42,4 +49,4 @@ def callback():
 def main(host, port, adapter):
     app = bottle.app()
     app.run(host=host, port=port, debug=True, server=adapter,
-        reloader=('--reload' in sys.argv))
+        reloader=('--reload' in sys.argv), quiet=True)

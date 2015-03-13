@@ -4,6 +4,9 @@ if sys.version[0] == '2':
 else:
     from urllib.request import urlopen
 
+import lib.util
+lib.util.logging_init()
+
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 def abspath(*parts):
     return os.path.join(os.getcwd(), *parts)
@@ -43,7 +46,9 @@ def open_page():
     webbrowser.open('http://localhost:8000')
 
 if server_running():
+    print('Server already running')
     open_page()
 else:
+    print('Starting server')
     import web.server
     web.server.main('0.0.0.0', 8000, WaitressAdapter)

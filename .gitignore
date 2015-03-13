@@ -53,3 +53,4 @@ target/
 
 #data
 *.csv
+_log.txt
