@@ -232,4 +232,8 @@ $(function() {
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
     });
+    $('#match_id').val(Number(localStorage.getItem('last_match_id')) + 1);
+    $('form').on('submit', function() {
+        localStorage.setItem('last_match_id',$('#match_id').val());
+    });
 });
